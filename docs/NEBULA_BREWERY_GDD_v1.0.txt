@@ -1,0 +1,1713 @@
+﻿?  NEBULA BREWERY  ?
+A Space Idle Clicker Game
+GAME DESIGN DOCUMENT
+Version 1.0  |  Draft  |  2025
+"Click a star. Build a brewery. Explore the universe.
+Learn more than you expected."
+CONFIDENTIAL - DEVELOPMENT DOCUMENT
+SECTION 1 - GAME OVERVIEW
+1. Game Overview
+1.1 Concept Statement
+Nebula Brewery is a space-themed idle clicker game where players brew stardust, build cosmic infrastructure, and explore the universe - one galaxy at a time. Rooted in the addictive DNA of Cookie Clicker, it layers in real astronomical education, absurdist humor, and an ever-expanding universe that never truly ends.
+Design Philosophy
+The game should feel like you accidentally learned astrophysics while trying to stop clicking. Every fact is real. Every joke is earned. Every upgrade makes you want the next one immediately.
+1.2 Genre & Platform
+Attribute
+Value
+Genre
+Idle Clicker / Incremental Game
+Platform (v1)
+Web Browser (HTML/CSS/JS, single file)
+Platform (v2+)
+Progressive Web App (PWA), Mobile Web
+Target Audience
+Casual gamers, space enthusiasts, students, people who said "just 5 more minutes" once
+Age Rating
+Everyone (E)
+Monetization
+None (v1) - Open source / passion project
+Estimated Play Session
+5 minutes to 5 hours (by design, both are valid)
+1.3 Core Loop
+The game loop is deceptively simple and deliberately infinite:
+Click the nebula/star  earn Stardust (?)
+Spend Stardust  buy Buildings that auto-generate Stardust per second
+Spend Stardust  buy Upgrades that multiply production
+Spend Stardust  buy Spacecraft that unlock Exploration Zones
+Explore Zones  earn new ingredients, unlock real space facts, gain production bonuses
+Watch the News Ticker  get rewarded with absurd cosmic headlines and hidden upgrades
+Prestige (Big Bang Reset)  restart with permanent multipliers, new content unlocks
+Repeat forever. The universe is endless. So is the game.
+1.4 The Secret Educational Mission
+Nebula Brewery has a hidden second purpose: it is a space education platform in disguise. Players will:
+Encounter real astronomical facts dressed as game flavor text
+Learn about actual spacecraft, celestial bodies, and cosmic phenomena through zone discovery
+Absorb the true scale of the universe through escalating numbers and distances
+Walk away genuinely knowing things about space they didn't know before - and not minding at all
+Key Design Rule
+Every real fact must be presented with absurd commentary that makes it MORE memorable, not less. The humor is the delivery mechanism for the education.
+1.5 Inspirations & Differentiators
+Game
+What We Borrow
+What We Do Differently
+Cookie Clicker
+Core idle loop, buildings, upgrades, news ticker, prestige
+Space theme, real educational content, spacecraft exploration system
+Universal Paperclips
+Escalating absurdity, philosophical undertones
+Humor-first, not horror-first; cooperative not existential
+Kittens Game
+Deep systems, long-term progression
+Accessible from minute one; no learning cliff
+Spore (early stages)
+Sense of cosmic scale, wonder of exploration
+Idle format; no real-time skill required
+SECTION 2 - ECONOMY & PROGRESSION SYSTEMS
+2. Economy & Progression Systems
+2.1 Primary Currency: Stardust (?)
+Stardust is the single primary currency. It is earned by clicking and by buildings, and spent on buildings, upgrades, and spacecraft. There is no secondary soft currency in v1.
+Source
+Rate
+Notes
+Manual Click (base)
+1 ? per click
+Modified by click upgrades
+Buildings (auto)
+Variable ?/sec
+Accumulates while tab is open
+Exploration Zones
+Bonus multipliers
+One-time production bonuses per zone
+Prestige Bonus
+Multiplier on restart
+Cosmic Memory scales with prestige count
+Offline Production
+50% of normal rate
+Capped at 8 hours offline; calculated on return
+2.2 Prestige Currency: Cosmic Memory (??)
+Cosmic Memory is earned when a player performs a Big Bang Reset (prestige). It persists across resets and provides permanent multipliers. It cannot be spent - it simply accumulates and passively improves each new run.
+Cosmic Memory
+Bonus
+1
++10% all production
+5
++50% all production + unlock first secret news set
+10
++100% all production + unlock Void Zone hint
+25
++250% all production + unlock alternate click animation
+50
++500% all production + unlock developer commentary mode
+100
++1000% all production + ??? (redacted)
+2.3 Progression Pacing
+The game should feel fast in early stages and deliberately slow - but never boring - in late stages. The following pacing targets guide building costs and production rates:
+Stage
+Approx. Time to Reach
+Total Stardust Earned
+Unlocks
+Early Game
+0-15 min
+0 - 10,000 ?
+First 3 buildings, first 5 upgrades, Earth Orbit
+Mid Game
+15 min - 2 hrs
+10K - 1M ?
+All buildings, most upgrades, Mars zone
+Late Game
+2-10 hrs
+1M - 1B ?
+All spacecraft through VoidGlider, Jupiter+
+Prestige Threshold
+8-20 hrs (first run)
+~500M ?
+Big Bang Reset becomes available
+Post-Prestige
+Each run ~30% faster
+Scales up
+New news sets, secret zone hints
+Endgame
+Days to weeks
+Quintillions+
+Observable Universe Edge, The Void
+2.4 Building Cost Formula
+All building costs follow a standard exponential curve used by most idle games. This ensures each purchase feels meaningful without being impossible:
+Cost Formula
+Cost(n) = BaseCost x 1.15^(n) where n = number of that building already owned. Each building costs approximately 15% more than the last.
+Example: If an Observatory has a base cost of 100 ?, the 10th Observatory costs 100 x 1.15^10 = ~405 ?. The 50th costs ~1,083,000 ?.
+2.5 Upgrade Purchase Model
+Upgrades are one-time purchases that appear in the upgrade panel when certain thresholds are reached. Unlike buildings, they do not scale - they have a fixed cost and a fixed effect. They are permanent and persist until prestige (at which point the player must re-buy them - this is intentional, giving early prestige runs a clear goal).
+SECTION 3 - BUILDINGS
+3. Buildings
+Buildings are the core passive income generators of Nebula Brewery. Each building has a name, a base cost, a base production rate per second, a description, a set of upgrade tiers, and a set of flavor text entries that change as you own more of that building. Buildings appear in the shop in order - the player must buy at least one of the previous building before the next unlocks.
+Naming Convention
+Each building name follows the theme of cosmic scale - starting local (Observatory watching the sky) and ending incomprehensible (Singularity Tap drawing from black holes). The humor escalates proportionally.
+3.1 Building Roster
+#
+Building
+Base Cost
+Base ?/sec
+Theme
+1
+Observatory
+15 ?
+0.1
+Watching the sky, collecting light from distant stars
+2
+Cosmic Distillery
+100 ?
+0.5
+Converting raw starlight into concentrated stardust
+3
+Nebula Farm
+500 ?
+3
+Harvesting hydrogen clouds; extremely inefficient, extremely charming
+4
+Pulsar Engine
+3,000 ?
+10
+Harnessing spinning neutron star energy for brewing
+5
+Black Hole Tap
+10,000 ?
+40
+Carefully extracting Hawking radiation at the event horizon
+6
+Wormhole Pipeline
+40,000 ?
+100
+Routing stardust through shortcuts in spacetime
+7
+Dyson Swarm
+200,000 ?
+400
+Satellites surrounding a star to capture its full output
+8
+Galactic Brewery
+1.5M ?
+1,600
+A full brewery-sized operation spanning a solar system
+9
+Dark Matter Siphon
+10M ?
+6,500
+Somehow extracting energy from the 27% of the universe we can't see
+10
+Multiverse Tap
+75M ?
+25,000
+Drawing stardust from parallel universes. They don't know. Probably.
+3.2 Building Descriptions & Flavor Text
+Each building has multiple flavor text entries that change as the player owns more. These are displayed in the building info panel when the player hovers or clicks the building name.
+Observatory
+"You point a telescope at the sky. You see things. Beautiful, terrifying, impossibly far things. You write down the coordinates. For the brewery. Obviously."
+Count
+Flavor Text
+1
+"One telescope. One dream. Many light-years of squinting."
+10
+"Ten observatories hum softly in the night. Your neighbors have questions. You have answers. They don't like the answers."
+25
+"Twenty-five observatories form a loose network. Scientists call you. You don't pick up. You're busy."
+50
+"Fifty telescopes. You've catalogued 3,000 new stars. None of them have names yet. You've been naming them after regulars."
+100
+"One hundred observatories. The light they collect could fill an ocean. You use it to brew. The universe has accepted this."
+200
+"Two hundred observatories. You've seen the edge of the observable universe. It blinked. You pretend this didn't happen."
+Cosmic Distillery
+"You build a machine that converts raw photons into pure stardust concentrate. The process involves three kinds of plasma and one very patient engineer. The engineer has questions. You have answers. The answers involve plasma."
+Count
+Flavor Text
+1
+"One distillery. It smells like ozone and possibility. Mostly ozone."
+10
+"Ten distilleries running at capacity. Your power bill is technically a national security concern."
+25
+"Twenty-five distilleries. You've invented a new branch of chemistry. You call it 'Brewistry.' Academics are upset."
+50
+"Fifty distilleries. The stardust concentrate you produce has been declared a controlled substance in four star systems."
+100
+"One hundred distilleries. The smoke from your facility is visible from orbit. Astronauts describe it as 'purple and smells like ambition.'"
+Nebula Farm
+"You stake a claim in the Orion Nebula. It's mostly hydrogen and helium and young hot stars. You plant flags. The stars are not impressed. You plant more flags."
+Count
+Flavor Text
+1
+"One nebula farm. Mostly clouds. Some of those clouds will become stars someday. Rent is due regardless."
+10
+"Ten nebula farms. You've disrupted star formation in two regions. Astronomers are filing complaints. You offer them stardust. They accept."
+25
+"Twenty-five nebula farms. The Orion Nebula is now 12% yours. The cosmic zoning board is reviewing your application."
+50
+"Fifty nebula farms. You receive a formal letter from a forming protostar. It says: 'Please stop.' You send a gift basket."
+100
+"One hundred nebula farms. You've invented 'cloud-to-glass' farming. Farmers are confused. Physicists are jealous."
+Pulsar Engine
+"A pulsar spins 716 times per second. You ask: what if we used that? Engineers say: 'theoretically.' You say: 'great.' They say: 'we meant theoretically as in impossible.' You say: 'great.' Work begins."
+Count
+Flavor Text
+1
+"One pulsar engine. The vibrations are technically a health risk. You add ear protection to the shop."
+10
+"Ten pulsar engines. The rhythmic ticking is audible from three parsecs away. Space navigators use it as a beacon."
+50
+"Fifty pulsar engines. You've accidentally created a navigational landmark. The Galactic Postal Service is grateful."
+100
+"One hundred pulsar engines. The combined tick is now a Grammy-nominated ambient album. You didn't submit it. It submitted itself."
+Black Hole Tap
+"Hawking radiation is real - black holes slowly evaporate by emitting particles at their event horizon. You figured: if they're emitting, we can collect. Engineering has never been more terrifying or more profitable."
+Count
+Flavor Text
+1
+"One black hole tap. The safety margins are 'aspirational.' The returns are extraordinary."
+10
+"Ten black hole taps. You've established protocols. The protocols are 'don't fall in' and 'don't ask what's inside.'"
+25
+"Twenty-five black hole taps. Physicists visit regularly to check your work. They leave confused. Then they come back. They still don't understand. They accept this."
+50
+"Fifty black hole taps. You've created a term: 'event horizon adjacent.' Real estate in that area is booming."
+100
+"One hundred black hole taps. Your operation is the leading academic argument for whether consciousness can survive an event horizon. The answer appears to be: yes, and it brews."
+Wormhole Pipeline
+"Einstein and Rosen described wormholes in 1935. They said: 'theoretically possible, probably unstable.' You say: 'I'll use the stable ones.' Einstein says nothing. He's been dead for decades. Work begins."
+Count
+Flavor Text
+1
+"One wormhole pipeline. It connects your main brewery to a point 40 light-years away. Delivery has never been faster or more nauseating."
+10
+"Ten wormhole pipelines. Spacetime is starting to look like a reasonable commute map. Commuters are concerned."
+25
+"Twenty-five wormhole pipelines. You've accidentally created the first intergalactic transit system. The fare is 'one unit of stardust.' Everyone pays."
+50
+"Fifty wormhole pipelines. A physicist describes your network as 'the most terrifying infrastructure project in human history.' You add this to your marketing."
+Dyson Swarm
+"Freeman Dyson theorized a swarm of satellites surrounding a star to capture its entire energy output. You thought: yes. Yes to all of that. The star had no say. This is capitalism."
+Count
+Flavor Text
+1
+"One Dyson Swarm. 10,000 individual satellites orbit a medium-sized star. It looks beautiful from a distance. The star is uncomfortable."
+10
+"Ten Dyson Swarms around ten different stars. From 100 light-years away, this sector is the brightest region in the galaxy. Astronomers are fascinated. You ignore their calls."
+50
+"Fifty Dyson Swarms. You've dimmed a significant portion of the galaxy's stars. SETI is now looking for YOUR signal, worried you're the alien civilization they feared."
+Galactic Brewery
+"At some point, 'brewery' stopped describing a building and started describing a civilization. You own a solar-system-spanning industrial complex. The original click that started it feels very far away."
+Count
+Flavor Text
+1
+"One Galactic Brewery spans three planets and two moons. The HR department is a separate department on its own planet."
+10
+"Ten Galactic Breweries. You are, by most reasonable definitions, an empire. You prefer 'artisanal operation.'"
+50
+"Fifty Galactic Breweries. The Milky Way is now partially branded. The galactic council has questions. You have lawyers. Specifically, 400 billion lawyers."
+Dark Matter Siphon
+"Dark matter makes up 27% of the universe. We can't see it, touch it, or measure it directly. You built a machine to harvest it anyway. 'How?' is a question for people who aren't making this much stardust."
+Count
+Flavor Text
+1
+"One Dark Matter Siphon. It works. How? Unknown. Why? Stardust. The scientific method has been updated accordingly."
+10
+"Ten Dark Matter Siphons. The dark matter content of this galactic region has dropped by a measurable amount. Cosmologists are alarmed. You send them gift baskets."
+50
+"Fifty Dark Matter Siphons. A paper published in Nature describes your operation as 'a cosmological emergency wrapped in a business license.' You frame it."
+Multiverse Tap
+"The multiverse hypothesis suggests infinite parallel universes exist alongside our own. You built a tap into them. From their perspective, something is very slightly draining. They don't know it's you. You think."
+Count
+Flavor Text
+1
+"One Multiverse Tap. In 99% of parallel universes, you didn't build this. In this one, you did. Statistically, you're the problem universe."
+10
+"Ten Multiverse Taps. Alternate versions of you are beginning to notice. Some of them are angry. One of them sent a strongly worded letter through the tap. You kept it."
+50
+"Fifty Multiverse Taps. You've been elected 'Most Likely to Destabilize Reality' by a council of parallel yous. You accept the award. You use it as a coaster."
+SECTION 4 - UPGRADES
+4. Upgrades
+Upgrades are one-time purchases that appear in the shop when specific conditions are met. They permanently boost production, unlock content, or change how the game plays. Upgrades are bought with Stardust and do NOT return on prestige - the player must re-buy them, which is intentional (it makes early prestige runs feel purposeful).
+4.1 Click Upgrades
+These improve the value of manual clicks. They appear sequentially as the player accumulates total stardust.
+Name
+Cost
+Effect
+Unlock Condition
+Flavor Text
+Better Telescopes
+100 ?
+Click = 2?
+Own 1 Observatory
+"Bigger lens. Deeper space. More stardust. Science."
+Reinforced Tap
+500 ?
+Click = 5?
+50 total ? earned
+"You hit it harder. It produces more. Nobody questions this."
+Quantum Fingers
+2,000 ?
+Click = 10?
+500 total ? earned
+"Your fingers now operate on a subatomic level. Please stop touching things."
+Stellar Strike
+10,000 ?
+Click = 25?
+5,000 total ?
+"Each click contains the force of a small stellar event. Small."
+Supernova Palm
+75,000 ?
+Click = 75?
+50,000 total ?
+"Technically you should be wearing gloves."
+Pulsar Punch
+500,000 ?
+Click = 200?
+500K total ?
+"716 clicks per second is the theoretical max. You're approaching it."
+Event Horizon Tap
+5M ?
+Click = 1,000?
+5M total ?
+"One tap. One event horizon. Uncountable consequences."
+Big Bang Click
+50M ?
+Click = 5,000?
+50M total ?
+"The first click. The original. You've come full circle."
+4.2 Building Upgrades
+Each building has 5 upgrade tiers that appear as you buy more of that building. Each doubles or significantly multiplies that building's output.
+Building
+Upgrade 1 (x2)
+Upgrade 2 (x2)
+Upgrade 3 (x3)
+Upgrade 4 (x4)
+Upgrade 5 (x5)
+Observatory
+Better Mirrors
+(Own 1)
+Adaptive Optics
+(Own 5)
+Space Telescope Array
+(Own 25)
+Quantum Lensing
+(Own 50)
+Reality Lens
+(Own 100)
+Distillery
+Upgraded Coils
+(Own 1)
+Plasma Filters
+(Own 5)
+Photon Compression
+(Own 25)
+Stellar Condensation
+(Own 50)
+Anti-Matter Still
+(Own 100)
+Nebula Farm
+Better Rakes
+(Own 1)
+Cloud Seeder
+(Own 5)
+Protostar Nursery
+(Own 25)
+Stellar Incubator
+(Own 50)
+Galaxy-Scale Harvest
+(Own 100)
+Pulsar Engine
+Shock Absorbers
+(Own 1)
+Timing Array
+(Own 5)
+Neutron Amplifier
+(Own 25)
+Rotational Overdrive
+(Own 50)
+Millisecond Resonator
+(Own 100)
+Black Hole Tap
+Longer Tether
+(Own 1)
+Radiation Collector
+(Own 5)
+Ergosphere Scoop
+(Own 25)
+Kerr Metric Tap
+(Own 50)
+Singularity Extract
+(Own 100)
+4.3 Global Production Upgrades
+These upgrades affect all buildings simultaneously and are unlocked by reaching stardust milestones.
+Name
+Cost
+Effect
+Unlock
+Flavor Text
+Stellar Synergy
+5,000 ?
+All buildings +10%
+1,000 ? earned
+"Turns out, things work better together. Revolutionary."
+Cosmic Resonance
+25,000 ?
+All buildings +25%
+10,000 ? earned
+"The universe hums at a frequency. You matched it. By accident."
+Dark Energy Boost
+200,000 ?
+All buildings +50%
+100,000 ? earned
+"Dark energy accelerates the universe's expansion. You've redirected some of it. Cosmologists are writing papers."
+Quantum Entanglement Network
+2M ?
+All buildings x2
+1M ? earned
+"Every brewery entangled with every other. Touch one, affect all. Don't think too hard about it."
+Spacetime Efficiency
+20M ?
+All buildings x3
+10M ? earned
+"You've bent spacetime slightly to make production faster. Einstein would be proud. Probably. He wasn't a fun person."
+Universal Constants Update
+200M ?
+All buildings x5
+100M ? earned
+"You've filed a formal request with the universe to update its production constants. Request approved."
+Cosmic String Loom
+2B ?
+All buildings x10
+1B ? earned
+"Weaves the fabric of spacetime. Mostly for efficiency. A little for napkins."
+4.4 Space Technology Upgrades
+Unlocked through the Spacecraft Exploration system. These upgrades reflect actual space technology and come with real educational flavor text.
+Name
+Cost
+Effect
+Real Science Note
+Ion Thruster
+5,000 ?
+Exploration speed +25%
+Real ion thrusters (like on NASA's Dawn spacecraft) use electric fields to accelerate ions - far more efficient than chemical rockets, just slower to accelerate.
+Solar Sail
+15,000 ?
+Passive ?/sec +10%
+Solar sails use radiation pressure from sunlight. JAXA's IKAROS was the first successful interplanetary solar sail in 2010.
+Gravity Assist
+30,000 ?
+Next spacecraft 40% cheaper
+Gravity assists (slingshot maneuvers) use a planet's gravity to accelerate spacecraft. Voyager used Jupiter and Saturn to reach interstellar space.
+Nuclear Pulse Drive
+100,000 ?
+All spacecraft range x2
+Project Orion (1950s-60s) proposed detonating nuclear bombs behind a spacecraft for propulsion. Technically worked. Politically complicated.
+Warp Drive Prototype
+500,000 ?
+Unlock 2 new exploration zones
+The Alcubierre metric (1994) describes a theoretical warp drive that contracts space ahead and expands it behind. No known energy source could power it.
+Quantum Navigation
+1M ?
+All zones +15% production
+Quantum navigation using entangled particles could theoretically allow GPS-independent positioning. Research is ongoing at MIT and ESA.
+Dyson Sphere Theory
+5M ?
+Dyson Swarm building x3
+A full Dyson Sphere is likely impossible - a swarm of satellites is more feasible. Physicist Freeman Dyson proposed this in 1960.
+The Answer Engine
+50M ?
+Reveals one hidden upgrade
+"42. It was 42 all along. You knew this. Why did you ask?"
+SECTION 5 - SPACECRAFT & EXPLORATION SYSTEM
+5. Spacecraft & Exploration System
+The Spacecraft and Exploration system is the second major pillar of Nebula Brewery. While buildings handle passive production, spacecraft unlock the universe - literally. Each spacecraft has a range that defines which celestial zones it can explore. Each zone contains real astronomical facts, unique ingredients for production bonuses, and narrative flavor text with absurdist commentary.
+Design Intent
+The exploration system should feel like actual discovery. When a player unlocks a new zone, there should be a genuine moment of wonder - both from the game's humor and from the real facts presented. The educational content is most effective precisely at this moment of novelty.
+5.1 Spacecraft Tiers
+Tier
+Name
+Cost
+Range
+Special Ability
+Real Inspiration
+1
+StarHopper
+1,000 ?
+Earth Orbit  Moon
+Basic scanning
+SpaceX Starhopper test vehicle (2019)
+2
+NovaWing
+10,000 ?
+Mars  Asteroid Belt
+Mineral collection
+Inspired by NASA's Dawn asteroid mission
+3
+VoidGlider
+50,000 ?
+Jupiter  Saturn
+Gas harvesting
+Cassini-Huygens Saturn mission
+4
+NebulaCruiser
+250,000 ?
+Kuiper Belt  Oort Cloud
+Dark matter sampling
+New Horizons Pluto/Kuiper Belt mission
+5
+Event Horizon
+1,000,000 ?
+Nearby Stars  Exoplanets
+Wormhole detection
+James Webb Space Telescope (real science)
+6
+Singularity Drive
+5,000,000 ?
+Galactic Core  Andromeda
+Intergalactic travel
+Theoretical: nuclear pulse or fusion drive
+7
+Infinity Vessel
+25,000,000 ?
+Observable Universe
+Reality bending
+Theoretical: Alcubierre warp metric
+8
+The Absurdity
+100,000,000 ?
+Beyond known space
+[REDACTED]
+"Some doors open from the other side."
+5.2 Spacecraft Flavor Text
+StarHopper
+"Small. Scrappy. Named after a rocket that mostly just hopped. But it hops in the right direction. Toward the stars. You respect that. It doesn't care. It's a spacecraft."
+NovaWing
+"Sleek. Fast. Designed for the asteroid belt, which turns out to be nothing like the movies. Far fewer near-misses. Far more rocks just floating, minding their business. The NovaWing minds its business too. Then collects their minerals."
+VoidGlider
+"At Jupiter, the size of things changes. The VoidGlider was built knowing it would feel small next to the Great Red Spot. It was built to not care. It mostly succeeds."
+NebulaCruiser
+"You are now past the planets. Past Pluto (a planet in your heart). Into the Kuiper Belt, where the solar system keeps its old stuff, the things it's not sure what to do with. You understand. You brew from it."
+Event Horizon
+"The name is aspirational. You haven't crossed an event horizon. You've visited nearby stars. It's still extraordinary. 'Event horizon adjacent' is still a remarkable place to be."
+Singularity Drive
+"The drive works by principles you've stopped trying to explain to people at parties. 'It uses singularities.' 'Like black holes?' 'Sort of.' 'Is it safe?' 'Define safe.' You've stopped going to parties."
+Infinity Vessel
+"You built a ship to travel to the edge of the observable universe. When you got there, there was no edge. Just more universe. And a sign that said: 'This is not the edge. Please stop looking for edges. - The Universe.'"
+The Absurdity
+"We don't talk about the Absurdity. Not because it's secret. Because language hasn't caught up to what it is yet. You'll know when you're ready. The Absurdity will wait. It's patient."
+5.3 Exploration Zones - Full Descriptions
+Each zone lists: discovery narrative, real astronomical facts (with flavor commentary), special ingredient unlock, upgrade unlock, and production bonus.
+Zone 1: Earth Orbit
+Attribute
+Content
+Unlock
+StarHopper spacecraft (1,000 ?)
+Discovery Text
+"You're in orbit. 250 miles up. The International Space Station passes by. The astronauts wave. They look tired. You send them a case of Star Ale. You are now best friends."
+Real Fact 1
+The ISS travels at 17,500 mph, orbiting Earth every 90 minutes. Astronauts see 16 sunrises and sunsets per day. That's 16 separate existential moments. Before breakfast.
+Real Fact 2
+There's no gravity in orbit - technically it's microgravity. Astronauts aren't weightless because gravity stopped. They're weightless because they're constantly falling sideways fast enough to miss the Earth.
+Real Fact 3
+Your Star Ale would float in perfect spheres in microgravity. Fancy serving. No cups needed. The ISS crew is intrigued but the no-alcohol policy remains. For now.
+Special Ingredient
+Zero-G Stardust - All production +5%
+Upgrade Unlock
+Satellite Network - Auto-collection from all owned zones
+Zone 2: The Moon
+Attribute
+Content
+Unlock
+5,000 ? total after Earth Orbit
+Discovery Text
+"You land in the Sea of Tranquility. It's quiet. Very quiet. You plant a small brewery flag. Neil Armstrong's footprint is 50 feet away. You do not step on it. Respect."
+Real Fact 1
+The Moon is moving away from Earth at 3.8 centimeters per year. Eventually, total solar eclipses will be geometrically impossible. Enjoy them. They're finite.
+Real Fact 2
+Moon dust (regolith) is incredibly sharp - it hasn't been weathered by wind or water, so every grain is a tiny glass shard. Apollo astronauts had it tear through suits. Your brewery equipment now has special filters.
+Real Fact 3
+One day on the Moon is 29.5 Earth days. Your patrons are very patient. Or they brought a lot of reading material.
+Special Ingredient
+Lunar Regolith Crystals - Tip income +10%
+Upgrade Unlock
+Lunar Base - Permanent passive Moon production
+Zone 3: Mars
+Attribute
+Content
+Unlock
+NovaWing spacecraft (10,000 ?)
+Discovery Text
+"Olympus Mons towers above you - three times the height of Everest. You consider climbing it. Then you remember you have a brewery to run. Priorities."
+Real Fact 1
+Olympus Mons is the tallest volcano in the solar system - 13.6 miles high and wide enough to cover all of France. If you stood at its base, you couldn't see the summit; the curve of Mars would hide it.
+Real Fact 2
+Mars has the largest dust storms in the solar system, sometimes covering the entire planet for months. The Mars rover Opportunity was killed by one in 2018. NASA's last signal from it was the equivalent of a distress call. We still feel this.
+Real Fact 3
+A Martian day (sol) is 24 hours and 37 minutes - almost Earth-like. NASA engineers on Mars missions slowly drift out of sync with Earth time as they follow rover schedules. Many described it as peaceful.
+Special Ingredient
+Iron Oxide Essence - All production +10%
+Upgrade Unlock
+Martian Greenhouse - Grows special exotic ingredients passively
+Zone 4: Asteroid Belt
+Attribute
+Content
+Unlock
+50,000 ? total after Mars
+Discovery Text
+"Between Mars and Jupiter, you find millions of rocks. One of them is worth more than Earth's entire economy. You take a small piece. For the brewery. Obviously."
+Real Fact 1
+The asteroid belt contains enough material to make a planet roughly twice the size of Earth - but Jupiter's immense gravity has always prevented accretion. It is a planet that never happened.
+Real Fact 2
+Ceres - the largest object in the asteroid belt, large enough to be a dwarf planet - may contain more fresh water than all of Earth combined, locked in ice beneath its surface.
+Real Fact 3
+The asteroid 16 Psyche is estimated to contain $10 quintillion worth of iron and nickel. NASA launched a mission to study it in 2023. The global economy is worth approximately $100 trillion. Do the math.
+Special Ingredient
+Metallic Core Fragment - All production +15%
+Upgrade Unlock
+Asteroid Mining Rig - Passive mineral income per second
+Zone 5: Jupiter & The Great Red Spot
+Attribute
+Content
+Unlock
+VoidGlider spacecraft (50,000 ?)
+Discovery Text
+"You approach Jupiter. It's big. Really big. You feel very small. The Great Red Spot stares at you like an eye. You wave. It does not wave back. Rude."
+Real Fact 1
+The Great Red Spot is an anticyclonic storm with winds up to 400 mph that has been raging for at least 350-400 years. It is wider than Earth. Scientists don't fully understand why it hasn't dissipated.
+Real Fact 2
+Jupiter has 95 confirmed moons as of 2023 - more than any other planet. Europa, one of them, has a liquid water ocean beneath its icy surface and is considered one of the best candidates for extraterrestrial life in our solar system.
+Real Fact 3
+Jupiter acts as a cosmic shield - its immense gravity deflects or captures comets and asteroids that would otherwise travel toward the inner solar system. Earth owes Jupiter several extinction events it never had.
+Special Ingredient
+Jovian Atmosphere Extract - All production +25%
+Upgrade Unlock
+Moon Network - Production multiplier per moon discovered
+Zone 6: Saturn's Rings
+Attribute
+Content
+Unlock
+250,000 ? total after Jupiter
+Discovery Text
+"You fly through Saturn's rings. Ice particles ping off your hull. It sounds like rain. Beautiful, deadly, frozen rain. You collect some for cocktails. Obviously."
+Real Fact 1
+Saturn's rings are 99% water ice, ranging from dust-sized grains to chunks the size of a house. They extend up to 282,000 km from Saturn - almost the distance from Earth to the Moon.
+Real Fact 2
+Despite their enormous width, Saturn's rings are only about 10-30 meters thick on average - paper-thin by astronomical standards. If shrunk to the scale of a piece of paper, the paper would be wider than a football field.
+Real Fact 3
+Saturn is slowly consuming its own rings. Ring material rains down into Saturn's atmosphere at a rate of 10,000 kg per second. The rings may disappear within 100 million years - cosmically soon.
+Special Ingredient
+Ring Ice Crystals - Tip income +25%
+Upgrade Unlock
+Ice Mining Station - Passive water income, unlocks new cocktail recipes
+Zone 7: Pluto & The Kuiper Belt
+Attribute
+Content
+Unlock
+NebulaCruiser spacecraft (250,000 ?)
+Discovery Text
+"Pluto. Still a planet in your heart. You leave a bottle of Star Ale on its surface. A memorial. For what was lost. For what remains."
+Real Fact 1
+Pluto has a heart-shaped glacier on its surface called Tombaugh Regio, made of nitrogen ice. When New Horizons photographed it in 2015, it broke the internet. A heart. On Pluto. Science gave us a gift.
+Real Fact 2
+Pluto takes 248 Earth years to orbit the Sun. Since its discovery in 1930, it has not yet completed a full orbit. It never will in any human lifetime. This feels appropriate for something we demoted.
+Real Fact 3
+The Kuiper Belt extends from Neptune's orbit to about 50 AU from the Sun and contains thousands of icy bodies - remnants from the solar system's early formation, preserved in deep freeze for 4.5 billion years.
+Special Ingredient
+Frozen Heart Essence - All production +30%
+Upgrade Unlock
+Kuiper Outpost - Enables extreme-range zone exploration
+Zone 8: The Oort Cloud
+Attribute
+Content
+Unlock
+1,000,000 ? total after Kuiper Belt
+Discovery Text
+"You've reached the edge of the solar system. The Sun is a distant dot. The cold is absolute. Something watches from the darkness. You pour a drink - for them, for you, for all of us."
+Real Fact 1
+The Oort Cloud is a theoretical spherical shell of icy bodies surrounding our solar system, extending up to 3.2 light-years from the Sun - halfway to Proxima Centauri. We have never directly observed it. We infer it exists because comets come from somewhere.
+Real Fact 2
+Long-period comets like Hale-Bopp originate in the Oort Cloud. Hale-Bopp's last orbit took approximately 4,200 years. Its next visit is estimated around the year 4385. If you see it, remember us.
+Real Fact 3
+Voyager 1, the farthest human-made object ever, is currently about 0.002 light-years from Earth. At its current speed, it will enter the Oort Cloud in approximately 300 years. It will take 30,000 years to pass through it.
+Special Ingredient
+Primordial Ice - All production +50%
+Upgrade Unlock
+Oort Cloud Beacon - Prestige bonus +10%
+Zone 9: Proxima Centauri
+Attribute
+Content
+Unlock
+Event Horizon spacecraft (1,000,000 ?)
+Discovery Text
+"4.24 light-years. You made it. The nearest star. An exoplanet orbits in the habitable zone. You wonder if they brew. You hope so. You leave a bottle. First contact, courtesy of Nebula Brewery."
+Real Fact 1
+Proxima Centauri is a red dwarf - small, dim, and cool by stellar standards. It is the closest star to our Sun. Despite being our nearest neighbor, it is so faint that it cannot be seen with the naked eye from Earth.
+Real Fact 2
+Proxima b, an exoplanet in the Proxima Centauri system, orbits within the habitable zone. However, it is likely tidally locked - one side permanently faces the star, one permanently faces darkness. Life, if it exists there, lives on the terminator line between eternal day and eternal night.
+Real Fact 3
+Even at the speed of Voyager 1, reaching Proxima Centauri would take over 70,000 years. The fastest spacecraft ever launched (Parker Solar Probe, ~700,000 km/h) would still take 6,000 years. Space is not forgiving of impatience.
+Special Ingredient
+Exoplanet Essence - All production +75%
+Upgrade Unlock
+Interstellar Beacon - Attracts alien patrons with unique dialogue
+Zone 10: TRAPPIST-1
+Attribute
+Content
+Unlock
+5,000,000 ? total after Proxima
+Discovery Text
+"Seven Earth-sized worlds. Three in the habitable zone. You visit each one. They're beautiful. You consider opening a franchise. Maybe next week."
+Real Fact 1
+The TRAPPIST-1 system, 39 light-years away, has seven rocky, Earth-sized planets - the most of any known system. Discovered in 2017, it immediately became the leading candidate for a system with life elsewhere.
+Real Fact 2
+Three of TRAPPIST-1's planets sit in the habitable zone where liquid water could exist on the surface. All three receive a similar amount of starlight energy as Earth, Venus, and Mars receive from our Sun.
+Real Fact 3
+The entire TRAPPIST-1 system would fit inside the orbit of Mercury. The planets are so close to each other that standing on one, you could see the others' surface features with the naked eye. Neighbors in the truest sense.
+Special Ingredient
+Seven-Star Essence - All production +100%
+Upgrade Unlock
+Multi-Planet Network - Unlocks all 7 TRAPPIST planets as individual sub-zones
+Zone 11: The Galactic Core - Sagittarius A*
+Attribute
+Content
+Unlock
+Singularity Drive spacecraft (5,000,000 ?)
+Discovery Text
+"You approach the center of the Milky Way. A supermassive black hole. Sagittarius A*. 4 million solar masses. It pulls. You resist. You pour a drink into the void. It accepts. You are now on speaking terms with a black hole."
+Real Fact 1
+Sagittarius A* (Sgr A*) has a mass of approximately 4 million Suns, compressed into a region smaller than Mercury's orbit around the Sun. The Event Horizon Telescope captured the first image of it in 2022.
+Real Fact 2
+Stars near the galactic center orbit Sgr A* at extraordinary speeds. The star S2 completes one orbit every 16 years at a top speed of ~5,000 miles per second - about 2.5% of the speed of light. General relativity effects are directly measurable in its orbit.
+Real Fact 3
+Despite being a supermassive black hole, Sgr A* is remarkably quiet for its size. It has periods of activity but is largely dormant. Some astronomers believe it feasted heavily in the past and is now resting. We respect this.
+Special Ingredient
+Singularity Essence - All production +200%
+Upgrade Unlock
+Gravity Harness - All upgrade costs reduced by 20%
+Zone 12: Andromeda Galaxy
+Attribute
+Content
+Unlock
+Infinity Vessel spacecraft (25,000,000 ?)
+Discovery Text
+"2.537 million light-years. Another galaxy. It's heading toward us. In 4.5 billion years, we'll collide and merge. You suggest merging the breweries too. Everyone agrees. These things take time."
+Real Fact 1
+The Andromeda Galaxy (M31) contains approximately 1 trillion stars - roughly twice as many as the Milky Way. It is the largest galaxy in the Local Group and is visible to the naked eye from dark skies as a faint smudge.
+Real Fact 2
+Andromeda is approaching us at approximately 110 km/s. In about 4.5 billion years, Andromeda and the Milky Way will collide and eventually merge into a new elliptical galaxy. Astronomers have nicknamed the result 'Milkomeda.' Despite the collision, the chance of any individual star or planet colliding with another is essentially zero - space between stars is simply that vast.
+Real Fact 3
+When Andromeda is visible in the night sky, you are seeing it as it was 2.537 million years ago. Homo sapiens had not yet evolved. The light reaching your eyes left Andromeda before humans existed.
+Special Ingredient
+Galactic Merger Dust - All production +500%
+Upgrade Unlock
+Intergalactic Trade Route - Tips arrive from other galaxies
+Zone 13: The Observable Universe Edge
+Attribute
+Content
+Unlock
+100,000,000 ? total after Andromeda
+Discovery Text
+"You've reached the limit. The cosmic horizon. Beyond this, light hasn't reached us yet. The universe expands faster than anything can travel. You wave goodbye to whatever is beyond. Maybe one day."
+Real Fact 1
+The observable universe is approximately 93 billion light-years in diameter - despite being only 13.8 billion years old. This is because space itself expanded; the light from the edges left 13.8 billion years ago but those edges have since moved much farther away.
+Real Fact 2
+Beyond the observable universe edge, galaxies are receding from us faster than light - not because they're moving faster than light, but because the space between us is expanding. We can never observe them, and they can never observe us.
+Real Fact 3
+There is nothing special about this horizon. It is simply our limit of observation. To an observer elsewhere in the universe, the observable universe edge would be in a completely different direction, centered on them. Every point in the universe is the center of its own observable universe. You are the center. So is everything else.
+Special Ingredient
+Horizon Essence - All production +1000%
+Upgrade Unlock
+Cosmic Horizon Telescope - Reveals a hint about Zone ∞
+Zone ∞: The Void (Secret Zone)
+Attribute
+Content
+Unlock
+Hidden - players must discover the unlock condition (see Section 9: Secrets)
+Discovery Text
+"You shouldn't be here. The numbers don't make sense. The stars are wrong. You pour a drink. The void pours back. You are now in a reciprocal relationship with nothingness. It's complicated."
+Real Fact 1
+Most of the universe is empty space. Vast cosmic voids exist between the filaments and walls of galaxies. The largest known void - the Bootes Void - is 330 million light-years across and contains only ~60 galaxies where thousands should exist.
+Real Fact 2
+Some researchers have proposed that the anomalous emptiness of certain voids may be evidence of other universes pressing against our own - their gravity creating underdense regions from our side of the boundary.
+Real Fact 3
+In some models of the multiverse, the void between universes is not truly empty but filled with quantum foam - constant fluctuations in spacetime that can, under the right conditions, spontaneously generate new universes. You are in one of those universes now. So is everything you have ever loved.
+Special Ingredient
+Void Essence - ??? (effect deliberately unrevealed until discovered)
+Upgrade Unlock
+The Final Tap - Pours from beyond existence. Effect: classified.
+SECTION 6 - THE NEWS TICKER
+6. The News Ticker
+The News Ticker scrolls across the top of the game screen at all times. It displays rotating headlines that combine absurdist humor with real space facts, react to player milestones, and occasionally hint at hidden content. This is one of the most important features for long-term player retention - it makes the world feel alive.
+Writing Rule
+Every news entry should make the player smirk, occasionally make them look something up, and always make the game world feel bigger than what's on screen. The best ones are headlines that sound real until the last four words.
+6.1 News Ticker Categories
+General Space News - absurdist reframings of real space facts
+Brewery Progress News - reacts to player milestones (first 100 stardust, first building, etc.)
+Exploration Dispatches - activates after player reaches certain zones
+Scientific Discoveries - real space discoveries framed as in-world news
+Patron Reports - news about your cosmic bar's clientele
+Government & Politics - cosmic governance going wrong in funny ways
+Late Game Escalation - increasingly surreal headlines for high-prestige players
+Secret Hints - very rare, very cryptic hints toward hidden content
+6.2 General Space News (Always Active)
+These rotate throughout the entire game regardless of progress.
+#
+Headline
+1
+Local star celebrates 4.6 billion years with no signs of slowing down
+2
+Scientists confirm universe still expanding, cite "ambitious early vision"
+3
+Jupiter's Great Red Spot enters 400th year, described as "doing its thing"
+4
+Pluto sends strongly-worded letter to IAU regarding "planet" reclassification
+5
+Moon moves 3.8cm further from Earth this year; longtime friends "growing apart"
+6
+Voyager 1 sends postcard from interstellar space: "It's fine. Cold. Very dark. Fine."
+7
+Survey finds 99.9% of universe is empty space; analysts describe this as "accurate"
+8
+Saturn's rings described as "basically paper-thin" by cosmologists who ruin everything beautiful
+9
+Europa ocean confirmed to contain more liquid water than Earth; Earth "not taking it well"
+10
+New exoplanet discovered; immediately deemed "probably not habitable" by experts
+11
+Sun expected to expand into red giant in 5 billion years; real estate market "concerned"
+12
+Andromeda confirmed on collision course with Milky Way; merger expected in 4.5 billion years
+13
+Scientists photo Sagittarius A* black hole; describe it as "beautiful and terrifying"; both are correct
+14
+TRAPPIST-1 system named "most hopeful address in space" for seventh consecutive year
+15
+Dark matter still undetected; physicists say it's "definitely there"; critics say "prove it"; impasse continues
+16
+Ceres found to contain more fresh water than Earth; Earth checks its ego
+17
+Pulsar found spinning 716 times per second; described as "doing too much" by astronomers
+18
+New comet from Oort Cloud arrives; last visited Earth 4,200 years ago; seems disoriented
+19
+Mars dust storm covers entire planet; Perseverance rover described as "handling it"
+20
+ISS crew sees 16 sunrises per day; astronauts describe mornings as "complicated"
+21
+Proxima Centauri b confirmed in habitable zone; one side permanently in darkness, one in eternal daylight; residents of neither consulted
+22
+James Webb Space Telescope peers back 13.4 billion years; describes early universe as "very active, very messy"
+23
+Olympus Mons on Mars confirmed tallest volcano in solar system; considers itself "above it all"
+24
+Milky Way has 200-400 billion stars; exact number "a bit hard to count from inside," astronomers admit
+25
+Observable universe contains 2 trillion galaxies; most have not responded to our calls
+6.3 Brewery Progress News (Milestone-Triggered)
+Trigger
+Headline
+First click
+"Local brewer clicks star for first time; neighbors have questions"
+First 10 ?
+"Stardust production underway; output described as 'technically a start'"
+First Observatory
+"New observatory opens; staff of one; telescope pointed at everything"
+First 100 ?
+"Nebula Brewery LLC officially registered in three galaxies, none of which have verified the forms"
+First Distillery
+"Cosmic distillery begins operations; coils glowing, plasma flowing, nobody entirely sure why it works"
+First 1,000 ?
+"Local stardust production exceeds previous record of zero by significant margin"
+First Nebula Farm
+"Pioneering farmer stakes claim in Orion Nebula; cloud zoning board 'not amused'"
+First 10,000 ?
+"Nebula Brewery output reaches 10,000; described as 'worrying' by physicists, 'inspiring' by investors"
+Own 10 of any building
+"Sources confirm Nebula Brewery is 'definitely not just one telescope anymore'"
+First 100,000 ?
+"Stardust production achieves what analysts are calling 'the point of no return'"
+First spacecraft
+"Brewery launches first spacecraft; mission: unclear; ambition: absolute"
+Reach Moon zone
+"Brewery plants flag on Moon; lawyers confirm flag-planting does not constitute territorial claim; brewery plants a second flag"
+First 1,000,000 ?
+"Nebula Brewery exceeds 1 million stardust; CEO offers no comment, simply points upward"
+First prestige
+"Universe reboots; Nebula Brewery emerges from cosmic reset 10% more efficient, 100% more knowing"
+5 prestiges
+"Veteran brewer on fifth cosmic run: 'It's different every time. And exactly the same. Both are true.'"
+6.4 Patron Reports
+As players progress, they gain cosmic "patrons" who frequent the brewery. These appear in the news as colorful regulars.
+#
+Headline
+1
+Regular patron "The Wandering Nebula" orders usual; staff still unsure what the usual is
+2
+Alien delegation visits brewery; describes Star Ale as "chemically improbable but emotionally resonant"
+3
+Patron composed entirely of dark matter runs up bar tab; disputes charge citing "technically invisible"
+4
+Black hole reportedly nursing a drink at table 4; staff keeping respectful distance
+5
+Three-star system orders round for all moons; tab calculated at 79 separate moons; negotiated down
+6
+Sentient gas cloud asks for "something light"; served photon cocktail; satisfied
+7
+Ancient pulsar orders drink; says nothing; ticks 716 times; leaves exact change
+8
+Rogue planet without a star visits; orders "anything warm"; appreciates the thought
+9
+Comet on 4,200-year orbit stops in; says last visit the menu was completely different; it was; there was no menu
+10
+Staff confirms the void is drinking again; refuses to discuss what the void is drinking
+11
+Galactic tourist from Andromeda notes: "You look different in person. Warmer than expected." Leaves generous tip.
+12
+Customer claims to be from the future; orders something that hasn't been invented yet; staff apologetically declining
+13
+Retired astronaut visits; orders "something that tastes like re-entry"; understood immediately
+14
+Crew of wandering generation ship visits; their great-grandparents placed the order
+15
+Entity of unknown origin requests "the usual"; it's the first time they've visited; nobody questions this
+6.5 Late Game / Prestige News (Unlocked Post-Prestige)
+These only appear after the player has performed at least one Big Bang Reset. They are more surreal and self-aware.
+#
+Headline
+1
+Scientists confirm this is not the first universe; previous universes were also primarily stardust operations
+2
+Cosmic census reveals 40% of known universes contain idle clicker games at various stages of completion
+3
+The numbers have exceeded what language can describe; new words invented: "brewtillion," "starquintizillion," "yes"
+4
+Researchers find evidence that someone in a parallel universe also just pressed prestige; they seem happy
+5
+The void has submitted a formal request to be a patron; brewery accepts; void's check has not yet cleared
+6
+Game designer spotted in background of Zone 11 photo; denies being there; was clearly there
+7
+Reality has begun following the brewery on social media; described as "unexpected but appreciated"
+8
+Experts confirm that at current production rates, brewer will outlast the heat death of the universe by approximately 3 rounds
+9
+New law passed in fourteen galaxies requiring all cosmological constants to be optimized for stardust production; brewer not officially consulted; outcome suspiciously favorable
+10
+The universe has begun humming at your production frequency; cosmologists are confused; you are not
+SECTION 7 - ACHIEVEMENTS
+7. Achievements
+Achievements are permanent unlocks that reward players for milestones, discoveries, and occasionally very specific behaviors. They are displayed in a dedicated achievements panel and can provide small production bonuses. More importantly, they tell the story of the player's journey through the game.
+7.1 Production Achievements
+Name
+Condition
+Bonus
+Flavor Text
+First Light
+Earn first 10 ?
+None
+"It begins. As all great things do: with a single click in the dark."
+Warming Up
+Earn 1,000 ?
++1% all production
+"You're just getting started. The universe can feel it."
+Stardust Millionaire
+Earn 1,000,000 ? total
++2% all production
+"You've earned a million stardust. You spend it immediately. This is correct."
+Billionaire of the Cosmos
+Earn 1,000,000,000 ? total
++3% all production
+"A billion stardust. There are fewer than 8 billion humans on Earth. You've outproduced them all. Combined. Repeatedly."
+The Trillion Club
+Earn 1,000,000,000,000 ? total
++5% all production
+"At this point, the numbers have stopped meaning anything and started meaning everything."
+Infinite Brew
+Earn 1,000,000,000,000,000 ? total
+Respect only
+"You were warned. You didn't stop. Nobody expected you to stop. This is why we built this."
+7.2 Building Achievements
+Name
+Condition
+Bonus
+Flavor Text
+Stargazer
+Own 1 Observatory
++1% Observatory output
+"One telescope pointed at the infinite. An appropriate start."
+The Observatory Network
+Own 100 Observatories
++5% Observatory output
+"100 telescopes. The sky is yours. The sky does not know this yet."
+Distillery Owner
+Own 1 Cosmic Distillery
+None
+"A distillery in space. There were definitely easier ways to get rich. You didn't take them."
+Master Distiller
+Own 50 Cosmic Distilleries
++5% Distillery output
+"Fifty distilleries. The plasma coils never sleep. Neither do you, honestly."
+Cloud Farmer
+Own 1 Nebula Farm
+None
+"You have planted flags in a nebula. The hydrogen is confused."
+Storm Chaser
+Own 1 Pulsar Engine
+None
+"Neutron star. 716 rotations per second. You harnessed it. For beer."
+Event Horizon Adjacent
+Own 1 Black Hole Tap
+None
+"You tapped a black hole. This is either the bravest or most questionable thing anyone has done in this galaxy."
+Wormhole Commuter
+Own 10 Wormhole Pipelines
++5% pipeline output
+"You have normalized travel through tears in spacetime. The commute is faster. The existential weight is the same."
+Dyson Sphere Dreamer
+Own 1 Dyson Swarm
+None
+"Freeman Dyson proposed this in 1960. He didn't think anyone would actually do it. You did it ten times."
+Galactic Industrialist
+Own all 10 building types
++10% all production
+"You built them all. The universe didn't ask for this. The universe got it."
+7.3 Exploration Achievements
+Name
+Condition
+Bonus
+Flavor Text
+One Small Sip
+Reach Earth Orbit zone
++10% click value
+"250 miles up. You can see the curve. Everything looks smaller and more precious."
+Footprints Respected
+Reach the Moon zone
++10% Moon production
+"You didn't step on Armstrong's footprint. Respect acknowledged by the universe."
+Martian Brewer
+Establish Mars zone
++15% Mars production
+"Olympus Mons is the largest mountain in the solar system. You built a brewery at its base. Priorities."
+Rock Collector
+Reach the Asteroid Belt
++15% all production
+"Between the planets, in the debris of a world that never was, you found gold."
+Great Red Regular
+Reach Jupiter zone
++20% all production
+"You waved at a 400-year-old storm. It did not wave back. You respect this consistency."
+Ring Bearer
+Explore Saturn's rings
++20% all production
+"Ice particles. House-sized. Paper-thin rings. You flew through them all. You collected samples. Cocktails pending."
+Pluto's Heart
+Reach Pluto zone
++25% all production
+"You left a bottle for the demoted dwarf planet. It appreciated the gesture. You think."
+Edge Walker
+Reach the Oort Cloud
++30% all production
+"You're at the edge of the solar system. The Sun is a star now. Just another star. You feel something."
+Interstellar Bartender
+Reach Proxima Centauri
++50% all production
+"First contact was made via a bottle of Star Ale left in a habitable zone. History books noted."
+Seven Wonders
+Unlock all 7 TRAPPIST-1 sub-zones
++75% all production
+"Seven worlds. Three habitable. One brewery. The ratios are improving."
+Black Hole Sommelier
+Reach Sagittarius A*
+Unlock Singularity Essence
+"You poured a drink into a supermassive black hole and it accepted. You're now on speaking terms with the center of the galaxy."
+Galactic Ambassador
+Reach Andromeda
++100% tip income
+"2.537 million light-years. You got there. You introduced yourself. You left a menu."
+Horizon Walker
+Reach the Universe Edge
+Unlock final prestige tier
+"You reached the edge of what can be seen. Beyond this: the unobservable. Beyond that: the unknown. You're taking notes."
+The Void Knows
+Find Zone ∞
+???
+"You shouldn't be here. The game is proud of you."
+7.4 Click Achievements
+Name
+Condition
+Bonus
+Flavor Text
+First Contact
+Click once
+None
+"The first click. The one that started it all. The universe felt it."
+Tapper
+Click 100 times
+None
+"100 clicks. Your dedication is noted. Your fingertip is fine."
+Persistent
+Click 1,000 times
++1% click value
+"1,000 clicks. You could have stopped at any point. You didn't. The stars approve."
+The Grind
+Click 10,000 times
++2% click value
+"10,000 clicks. That's not clicking anymore. That's a lifestyle."
+Bot Fingers
+Click 100,000 times
++3% click value
+"You know cookie clicker players used auto-clickers? We see you. The achievement is earned regardless."
+One With The Click
+Click 1,000,000 times
++5% click value
+"A million clicks. You have transcended clicking. You are clicking. Clicking is you."
+7.5 Secret / Hidden Achievements
+These achievements are not visible in the achievement panel until earned. They reward curiosity, patience, and occasionally leaving the game open for very long periods.
+Name
+Condition (hidden from player)
+Reward
+Night Owl
+Have the game open for 6 consecutive hours
++5% overnight production
+Waiting on the Universe
+Leave the game idle for 8 hours
+"Patience Unlocked" title + offline cap raised to 12 hours
+The Long Game
+Reach 30 days of total playtime
+Unique 'Veteran Brewer' patron appears permanently
+Completionist
+Buy every upgrade in a single run
++10% all production permanently
+The Philosopher
+Read every zone discovery text
+Unlock 'Astronomer' dialogue mode - all facts given with additional depth
+404: Planet Not Found
+Try to click Pluto before unlocking the Kuiper Belt zone
+Pluto sends you a thank-you card with production bonus +2%
+Accidental Scientist
+Earn the Zone Fact read achievement for 10 zones
+NASA tweet generator - fake NASA tweets begin appearing in ticker
+The Bot Question
+Click more than 20 times per second for 5 seconds
+Achievement: "We're not judging. The stardust is real either way."
+SECTION 8 - PRESTIGE: THE BIG BANG RESET
+8. Prestige - The Big Bang Reset
+The Big Bang Reset is Nebula Brewery's prestige mechanic. When a player has earned enough stardust in a single run (threshold: ~500 million in the first run), they unlock the ability to collapse their entire operation and start over - but not from nothing.
+8.1 How It Works
+Player reaches prestige threshold for the current run
+The "Big Bang" button activates - large, dramatic, impossible to miss
+Player is shown a confirmation screen detailing exactly what they will lose and keep
+On confirmation: all buildings, upgrades, and stardust are reset to zero
+Player keeps: Cosmic Memory points (prestige currency), any unlocked secret zones, certain permanent achievements
+New run begins ~25% faster than the previous one thanks to Cosmic Memory multipliers
+Subsequent prestige thresholds are higher - each run must reach a larger total to prestige again
+8.2 Big Bang Reset Screen
+"The universe is 13.8 billion years old. It started with a single, incomprehensible explosion of everything from nothing. You're about to do something similar. But smaller. On purpose."
+Display on the Big Bang screen:
+Total stardust earned this run
+Buildings and upgrades that will be lost
+Cosmic Memory points that will be earned
+Production multiplier for the next run
+A real astronomical fact about the Big Bang - different each time
+8.3 Big Bang Real Facts (Displayed on Reset Screen)
+#
+Fact
+1
+The Big Bang was not an explosion in space - it was an expansion of space itself. There was no center. Every point was the origin.
+2
+In the first 3 minutes after the Big Bang, the universe formed all the hydrogen and helium that exists. Everything else was made later, inside stars.
+3
+The cosmic microwave background radiation - the afterglow of the Big Bang - still fills the entire universe today. Your microwave picks up a small fraction of it as static.
+4
+The Big Bang did not produce heavy elements. Iron, gold, uranium - all of it was forged in the cores of dying stars and scattered by supernovae. You are made of those elements.
+5
+Before the Big Bang, there was no "before." Time itself began with the Big Bang. Asking "what was there before" is like asking "what is south of the South Pole."
+6
+The observable universe contains approximately 2 trillion galaxies. Each was seeded by tiny quantum fluctuations in the first fraction of a second after the Big Bang.
+7
+In the first second after the Big Bang, the temperature was 10 billion degrees Celsius. In the first trillionth of a second, it may have been infinite. We don't have equations for infinite.
+8.4 What Changes Each Run
+To keep prestige runs from feeling identical, each new run introduces at least one new element:
+New news ticker entries unlock (late-game and prestige-specific headlines)
+Patron dialogue shifts - regulars comment on the reset ("You're back. You look different. Same eyes.")
+One new secret achievement becomes discoverable per prestige
+After 5 prestiges, a new building tier becomes available (Tier 11, currently redacted)
+After 10 prestiges, Zone ∞ hint frequency increases significantly in the ticker
+SECTION 9 - SECRETS & HIDDEN CONTENT
+9. Secrets & Hidden Content
+Secrets are one of the most beloved aspects of Cookie Clicker's enduring community. Nebula Brewery should have a rich secret ecosystem - things players discover, share, argue about, and obsess over for months after release.
+9.1 The Void Zone - Unlock Condition
+Zone ∞ (The Void) is the game's ultimate secret zone. The unlock condition is intentionally obscure and will not be documented in-game. It is documented here for developers only.
+Developer Note
+Unlock condition for The Void: Player must (1) reach the Observable Universe Edge zone, (2) have earned at least 5 Cosmic Memory points (prestiges), (3) let the game sit idle for exactly 13 minutes and 8 seconds (a reference to 13.8 billion years, the age of the universe), (4) then click the star/nebula exactly 42 times in rapid succession. The number 42 should feel like a joke. It is not entirely a joke.
+9.2 Hidden Upgrades
+Name
+Unlock Condition
+Effect
+The Quiet One
+Read all zone discovery texts without buying a building for 5 minutes after each
++15% all production, permanently
+Pale Blue Dot
+Zoom in on Earth in the zone map and stay for 60 seconds
+Unlocks Carl Sagan quote mode - real Carl Sagan quotes appear in the news ticker
+The Fermi Paradox
+Unlock alien patrons but never serve them (let their orders time out 10 times)
++20% tip income; flavor: "You thought about it. That's enough."
+Voyager's Farewell
+Reach the Oort Cloud zone and stay for 30 minutes total (cumulative)
+Unlocks Voyager golden record replica in brewery decor; +5% all production
+Against All Odds
+Start a prestige run and buy only Observatories for the first 10 minutes
+Observatories gain +100% output permanently
+9.3 The Dev Commentary Mode
+After 50 prestiges, a small star appears in the game's corner. Clicking it activates Developer Commentary Mode - a series of honest, sometimes emotional, sometimes funny notes from the creators about building the game, why certain decisions were made, and what space means to them personally. This is a love letter hidden inside the game.
+9.4 The Void Essence Effect
+(Developer only - do not document in game)
+CLASSIFIED
+Void Essence, when collected from Zone ∞, does not increase production. Instead, it triggers a visual event: the game screen slowly fills with stars until it looks like a real photograph of space. All UI fades. The ticker displays one final message: "You found it. The thing between things. The space between spaces. It was always here. You just needed to look." After 30 seconds, the game resumes normally. There is no production bonus. This is intentional. Some things are not about the numbers.
+SECTION 10 - VISUAL DESIGN DIRECTION
+10. Visual Design Direction
+Nebula Brewery should look like a space bar at the edge of the universe - warm, worn, alive with color, but with the deep darkness of space always present in the background. The aesthetic sits between scientific visualization and neon tavern sign.
+10.1 Color Palette
+Role
+Color
+Hex
+Usage
+Primary Background
+Deep Space Black
+#0A0E1A
+Main game background, always present
+Secondary Background
+Dark Navy
+#0F172A
+UI panels, side bars
+Primary Accent
+Star Gold
+#F59E0B
+Currency icons, key buttons, headlines
+Secondary Accent
+Nebula Purple
+#7C3AED
+Upgrade highlights, prestige elements
+Tertiary Accent
+Cosmic Cyan
+#06B6D4
+Zone indicators, spacecraft UI
+Text Primary
+Soft White
+#F8FAFC
+All primary text
+Text Secondary
+Light Gray
+#94A3B8
+Descriptions, flavor text, secondary info
+Positive / Bonus
+Star Green
+#22C55E
+Production bonuses, achievement unlocks
+Warning / Attention
+Pulsar Orange
+#F97316
+Prestige prompts, important alerts
+Danger / Cost
+Red Dwarf
+#EF4444
+Irreversible actions, high costs
+10.2 Typography
+Role
+Font
+Usage
+Display / Title
+Cinzel or Playfair Display
+Game title, section headers, zone names
+Body / UI
+Space Mono or IBM Plex Mono
+Numbers, stats, currency displays - monospace for alignment
+Flavor / Narrative
+Lora or Merriweather
+Flavor text, zone discovery narratives, news ticker
+Labels
+Inter or DM Sans
+UI labels, tooltips, small print
+10.3 UI Layout
+Left Panel - The Brewery (clickable star/nebula, stardust counter, production per second)
+Center Panel - The Universe Map (zone exploration, spacecraft status)
+Right Panel - The Shop (buildings, upgrades, spacecraft - tabbed)
+Top Bar - News Ticker (scrolling, always visible)
+Bottom Bar - Stats (total earned, achievements count, prestige count)
+Floating - Achievement notifications (appear and fade, top-right)
+10.4 Animation Direction
+The clickable star should pulse slowly - like a heartbeat - even when not being clicked
+Stardust particles should float upward from the star on every click
+Buildings in the left panel should have subtle idle animations (telescope rotating, distillery venting steam)
+Zone discovery should have a full-screen "arrival" animation - screen fades to black, then the zone renders in
+The Big Bang Reset button should glow and throb with increasing intensity as the player gets closer to the prestige threshold
+News ticker should have gentle horizontal scroll, not jumping text
+10.5 Real Space Images
+Real NASA/ESA public domain images will be integrated as zone backgrounds. Each image should be darkened and subtly colored to fit the game palette. The image should feel like the zone - not a photograph inserted into a game, but the game's world rendered in real light.
+Zone
+Image Source
+Credit
+Earth Orbit
+ISS photography, NASA Earth Observatory
+NASA/ISS Crew
+Moon
+Apollo 17 lunar surface photography
+NASA Apollo Archive
+Mars
+Mars Reconnaissance Orbiter, Curiosity rover
+NASA/JPL-Caltech
+Asteroid Belt
+Dawn spacecraft images of Ceres and Vesta
+NASA/JPL-Caltech/UCLA/MPS/DLR/IDA
+Jupiter
+Juno spacecraft JunoCam images
+NASA/JPL-Caltech/SwRI/MSSS
+Saturn
+Cassini spacecraft wide-angle images
+NASA/JPL-Caltech/Space Science Institute
+Pluto
+New Horizons LORRI images
+NASA/JHUAPL/SwRI
+Deep Space
+James Webb Space Telescope public releases
+NASA/ESA/CSA/STScI
+Andromeda
+Hubble Space Telescope Andromeda mosaic
+NASA/ESA/Hubble Heritage Team
+SECTION 11 - AUDIO DESIGN
+11. Audio Design
+Nebula Brewery's audio should enhance the sense of cosmic scale and the warmth of a well-run bar. Music and sound effects are layered - the background always feels like deep space, but the brewery itself feels alive and active.
+11.1 Background Music
+Zone / Context
+Music Mood
+Reference Vibe
+Main Brewery (early)
+Warm ambient synth, slow pulse, low hum
+Brian Eno 'Music for Airports' but with a heartbeat
+Main Brewery (late game)
+Deeper, more complex, slightly cosmic dread mixed with wonder
+Hans Zimmer 'Interstellar' ambient tracks
+Earth Orbit zone
+Clean, sparse, with subtle digital texture
+Boards of Canada early albums
+Deep Space zones
+Increasingly minimal - more silence than sound
+Stars of the Lid, lowercase ambient
+Galactic Core zone
+Deep bass drone, slowly building
+Max Richter 'On the Nature of Daylight'
+Zone ∞ (The Void)
+Complete silence - only the sound of faint breathing
+The sound of the player in a quiet room
+Big Bang Reset
+Full orchestral swell, then silence, then a single piano note
+The feeling of starting over, willingly
+11.2 Sound Effects
+Action
+Sound Description
+Click (base)
+Soft cosmic chime - like a finger flicking a crystal glass
+Click (upgraded)
+Slightly richer, warmer chime - same character, more resonance
+Building purchased
+Satisfying deep thump + distant telescope whirring or machinery starting
+Upgrade purchased
+Bright ascending arpeggio - musical, 3 notes
+Achievement unlocked
+Full short fanfare, warm and celebratory, 2 seconds max
+Zone discovery
+Sustained swell, like a breath being released after being held
+News ticker appear
+Subtle typewriter tick as each headline loads
+Spacecraft launched
+Low rumble build + clean launch whoosh
+Big Bang activated
+Crescendo  absolute silence  single reverberant tone
+Prestige complete
+Distant explosion, then rain of tiny chimes descending
+SECTION 12 - TECHNICAL ARCHITECTURE
+12. Technical Architecture
+Nebula Brewery v1 is a single-file browser game. No server, no database, no login required. Progressive enhancement: works without an account, optionally syncs via localStorage.
+12.1 Technology Stack
+Layer
+Technology
+Rationale
+Core Language
+JavaScript (ES6+)
+Universal browser support, no build step for v1
+UI Framework
+Vanilla JS with optional React for v2
+Minimize dependencies for v1; v2 may migrate to React for component architecture
+Styling
+CSS Custom Properties + CSS animations
+No framework dependency; full control; performant
+State Management
+Plain JS object + localStorage persistence
+Simple, transparent, debuggable
+Build Tool
+None (v1) / Vite (v2)
+v1 ships as a single HTML file
+Audio
+Web Audio API
+No library needed for simple procedural sounds
+Images
+NASA/ESA public domain APIs + CDN
+Free, properly credited, high quality
+Hosting
+GitHub Pages (free)
+Simple deployment, version control, community access
+12.2 Save System
+All game state is saved to localStorage every 30 seconds and on tab close/blur
+Save data is a single JSON object: { stardust, buildings, upgrades, spacecraft, zones, achievements, prestige, settings, timestamp }
+Players can export their save as a base64 string for backup/sharing
+Players can import a save string to restore progress
+On prestige, save is overwritten with fresh state + preserved prestige data
+12.3 Performance Targets
+Metric
+Target
+Notes
+Initial Load
+< 2 seconds
+Single HTML file; images lazy-loaded
+Production Tick Rate
+Once per second (display), every 100ms (calculation)
+Smooth number updates without performance cost
+Offline Calculation
+< 500ms
+Calculate missed production instantly on return
+Memory Usage
+< 50MB
+No persistent DOM bloat; clean rendering
+Mobile Performance
+Playable on mid-range phones
+Touch-optimized clicks, no hover-only interactions
+12.4 Game State Data Model
+The core save object structure (JavaScript):
+const gameState = {
+  stardust: BigInt,          // Current stardust (uses BigInt for large numbers)
+  totalEarned: BigInt,       // All-time stardust earned (for milestones)
+  buildings: { [id]: count },// e.g. { observatory: 12, distillery: 5 }
+  upgrades: Set<upgradeId>,  // Purchased upgrade IDs
+  spacecraft: { [id]: bool },// Owned spacecraft
+  zones: { [id]: { unlocked, visited, factsRead: Set } },
+  achievements: Set<achievementId>,
+  cosmicMemory: number,      // Prestige points (persist across resets)
+  prestigeCount: number,     // Number of Big Bang Resets performed
+  totalPlaytime: number,     // Seconds (for hidden achievements)
+  settings: { sound, music, animations, notifications },
+  lastSaved: timestamp,      // For offline production calculation
+  secretFlags: {},           // Internal flags for secret unlock tracking
+}
+SECTION 13 - DEVELOPMENT ROADMAP
+13. Development Roadmap
+Version 1.0 - The Foundation
+Target: June 2025 | A fully playable, complete idle game experience.
+Feature
+Status
+Core click mechanic (stardust collection)
+To Build
+All 10 buildings with flavor text
+To Build
+Click upgrades (8 tiers)
+To Build
+Building upgrades (5 tiers per building)
+To Build
+Global production upgrades (7)
+To Build
+News Ticker (50+ entries minimum)
+To Build
+Milestone-triggered news
+To Build
+Spacecraft system (all 8 tiers)
+To Build
+Exploration zones 1-8 (Earth to Oort Cloud)
+To Build
+Achievements (Production, Building, Click - basic set)
+To Build
+Big Bang Reset (prestige) mechanic
+To Build
+Save/load via localStorage
+To Build
+Offline production calculation
+To Build
+Basic responsive layout (desktop + mobile)
+To Build
+Background music (2 tracks)
+To Build
+Core sound effects
+To Build
+Version 1.5 - The Deep Expansion
+Target: 2 months post-launch | Adding the outer solar system and first interstellar content.
+Exploration zones 9-13 (Proxima to Universe Edge)
+TRAPPIST-1 sub-zone system
+Zone ∞ (The Void) - full secret implementation
+All patron dialogue (15+ unique patrons)
+Prestige news sets (10+ entries)
+Hidden upgrades and secret achievements
+Dev commentary mode (unlocked at 50 prestiges)
+Real NASA image integration (API + fallback)
+Export/import save functionality
+Version 2.0 - The Polish
+Target: 3-4 months post-launch | The version that could be shown anywhere.
+Full zone arrival animations
+Building idle animations
+Achievement notification system (animated)
+PWA support (installable, offline mode)
+Mobile-optimized touch controls
+Accessibility: reduced motion mode, high contrast option, screen reader basics
+Statistics page (lifetime stats, records, graphs)
+Optional account sync (cloud save via simple backend)
+Version 3.0 - The Legendary Beast
+Target: 6+ months post-launch | The version that makes someone write a Reddit post about it.
+Tier 11 building (unlocked at 5 prestiges - details redacted in this doc)
+Community challenges: weekly production goals, leaderboard (optional, anonymous)
+Seasonal content: real astronomical events (eclipses, comet passes) trigger in-game events
+The Educator Mode: optional mode that surfaces all real facts with citations, links, and deeper reading
+Mobile app (React Native wrapper)
+More zones: additional exoplanet systems, neutron star environments, cosmic web visualization
+Patron system expansion: patrons with recurring stories, relationships that develop over time
+SECTION 14 - APPENDIX
+14. Appendix
+14.1 Real Astronomical Facts Master List
+This is a living list of real facts to be drawn from for zone content, news ticker entries, and upgrade flavor text. All facts are accurate as of 2024-2025 and should be verified at implementation time.
+Category
+Fact
+Source / Mission
+Solar System
+The Sun contains 99.86% of all the mass in the solar system
+NASA Solar System Exploration
+Solar System
+Light takes 8 minutes 20 seconds to reach Earth from the Sun
+Standard physics
+Solar System
+Neptune was predicted mathematically before it was observed
+Le Verrier, Adams, 1846
+Solar System
+Uranus rotates on its side - its axial tilt is 97.77 degrees
+Voyager 2, 1986
+Stars
+The largest known star, UY Scuti, is 1,700 times the radius of the Sun
+ESO observations
+Stars
+A teaspoon of neutron star material weighs approximately 10 million tons
+Standard astrophysics
+Stars
+The Sun loses 4 million tons of mass per second through nuclear fusion
+Standard astrophysics
+Black Holes
+The first image of a black hole (M87*) was captured in 2019 by the Event Horizon Telescope
+EHT Collaboration
+Black Holes
+If the Sun became a black hole, Earth's orbit would not change. The gravity would be identical.
+Standard physics
+Galaxies
+The Milky Way is approximately 100,000 light-years in diameter
+Gaia spacecraft data
+Galaxies
+There may be 2 trillion galaxies in the observable universe
+Conselice et al., 2016
+Exoplanets
+As of 2024, over 5,500 confirmed exoplanets have been discovered
+NASA Exoplanet Archive
+Exoplanets
+The first confirmed exoplanet orbiting a Sun-like star was 51 Pegasi b, discovered in 1995
+Mayor & Queloz (Nobel Prize 2019)
+Universe
+The universe is approximately 13.787 billion years old
+Planck Collaboration, 2018
+Universe
+Dark energy makes up approximately 68% of the universe's total energy
+Planck data
+Universe
+The observable universe contains about 10^80 atoms
+Cosmological estimates
+14.2 Number Naming Convention
+As stardust numbers grow, the game must display them in a readable format. The following naming system is used:
+Value
+Name
+Display
+Context
+1,000
+Thousand
+1K
+Early game
+1,000,000
+Million
+1M
+Early mid-game
+1,000,000,000
+Billion
+1B
+Mid game
+1,000,000,000,000
+Trillion
+1T
+Late game
+10^15
+Quadrillion
+1Qa
+Post-prestige
+10^18
+Quintillion
+1Qi
+Post-prestige
+10^21
+Sextillion
+1Sx
+High prestige
+10^24
+Septillion
+1Sp
+High prestige
+10^30
+Nonillion
+1No
+Endgame
+10^33
+Decillion
+1Dc
+Endgame
+10^100
+Googol
+1Gg
+Secret zone territory
+∞
+The Void
+?
+Zone ∞ only
+14.3 Glossary
+Term
+Definition
+Stardust (?)
+The primary game currency. Earned by clicking and from buildings.
+Cosmic Memory (??)
+Prestige currency. Earned on Big Bang Reset. Persistent across all runs.
+Big Bang Reset
+The prestige mechanic. Resets buildings and stardust; awards Cosmic Memory; starts a new run.
+Buildings
+Passive income generators. Each has a base cost, production rate, and upgrade tiers.
+Upgrades
+One-time purchases that permanently boost production or unlock content.
+Spacecraft
+Special purchases that unlock exploration zones.
+Exploration Zones
+Locations that unlock real space facts, production bonuses, and unique ingredients.
+News Ticker
+Scrolling headlines that blend absurdist humor with real space facts. A primary engagement loop.
+Patron
+A cosmic character who visits the brewery. Appears in dialogue, news, and events.
+Prestige
+The act of performing a Big Bang Reset. "To prestige" means to reset for Cosmic Memory.
+APS
+Stardust per second. The primary production metric.
+Flavor Text
+Narrative text attached to buildings, upgrades, and achievements that builds the game's world.
+14.4 Suggested Reading & Inspiration
+For anyone building or contributing to Nebula Brewery, the following resources are recommended:
+Pale Blue Dot - Carl Sagan (the philosophical heart of why space matters)
+A Brief History of Time - Stephen Hawking (accessible cosmology)
+The Martian - Andy Weir (problem-solving spirit, humor in adversity)
+NASA Astronomy Picture of the Day (apod.nasa.gov) - daily dose of real wonder
+Cookie Clicker (orteil.dashnet.org/cookieclicker) - study the master; understand the loop
+Universal Paperclips (play it before reading about it)
+The Scale of the Universe 2 - online interactive (humbling and delightful)
+?  END OF DOCUMENT  ?
+Nebula Brewery GDD v1.0  |  The universe is waiting.

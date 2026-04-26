@@ -1,0 +1,919 @@
+﻿?  NEBULA BREWERY  ?
+Content Expansion Pack - Volume 1
+SUPPLEMENT TO: Game Design Document v1.0
+Patrons · Extended Flavor Text · News Ticker Expansion · TRAPPIST Sub-Zones · Click Feedback · More
+"The universe gave us the material. We just had to listen to it."
+CONFIDENTIAL - DEVELOPMENT SUPPLEMENT
+SECTION A - THE PATRON SYSTEM
+A. The Patron System - Full Character Profiles
+Patrons are the soul of the brewery. They are not mechanics - they are relationships. Each patron has a name, a nature, a drink of choice, a tip behavior, a first-encounter line, evolving dialogue tied to zone milestones, and a secret they eventually reveal. Players who pay attention will piece together a universe from patron conversations alone.
+Writing Rule for Patrons
+Every patron should feel like they have existed longer than the game. Their dialogue should reference things the player hasn't seen yet, imply histories we never fully explain, and occasionally say something so quietly true that the player stops clicking for a second.
+A.1 - Patron: The Cartographer
+Attribute
+Detail
+Full Name
+The Cartographer (no other name given; won't say why)
+Nature
+Ancient. Patient. Has been mapping the universe longer than most stars have existed. Speaks slowly, as if choosing each word from a very large collection.
+Appearance
+Tall, robed in something that looks like a star chart - the constellations shift when you're not looking directly at them. Carries rolled scrolls of impossible length.
+Drink of Choice
+Oort Cloud Reserve - a slow-poured, ice-cold glass. Always ordered the same way: "The usual. Cold as the edge."
+Tip Behavior
+Tips in coordinates. The coordinates, when looked up, are always somewhere beautiful and slightly heartbreaking.
+Unlock Condition
+Reach the Asteroid Belt zone.
+First Encounter:
+"You've started mapping. Good. Most don't. They just... move through space without knowing where they've been. You're already different."
+Dialogue - Zone Milestones:
+Zone Reached
+What The Cartographer Says
+Earth Orbit
+"The first orbit. 250 miles up. You know what they say the hardest part is? Not going up. Coming back down and still wanting more."
+Moon
+"I mapped the Moon once. Took fourteen years. Then New Horizons sent back images in an afternoon. I'm choosing to be proud of the technology."
+Mars
+"Olympus Mons. I stood at its base. You can't see the summit from there - the curvature of Mars hides it. Some things are too large to see from inside them."
+Asteroid Belt
+"This is where a planet tried and failed. Jupiter wouldn't let it. I always thought that was sad. Then I thought: maybe it was protecting us. Then I thought: maybe both."
+Jupiter
+"The Great Red Spot has been on my maps for four centuries. Same storm. Same eye. I used to wave at it. It never waved back. I still wave."
+Proxima Centauri
+"You've left the solar system. I've been waiting to say this to someone for a very long time: welcome to the rest of it. It's larger than you think. You think you know how large. You don't yet."
+Andromeda
+"I mapped Andromeda once. Took a while. I won't say how long. I will say: the light that left there 2.5 million years ago was worth the wait."
+The Void (Zone ∞)
+"Oh. You found it. I took it off my maps. Deliberately. Some places aren't meant to be charted. They're meant to be... felt. You felt it. That's the right way to find it."
+Secret (revealed after 5 patron visits):
+"I've been mapping since before your star formed. I've seen three civilizations reach the Oort Cloud and turn back. You're the first who kept going. I didn't put that in the maps. I put it here." - Sets down a small stone that glows faintly. Never explains it. The glow increases as you unlock more zones.
+A.2 - Patron: The Comet
+Attribute
+Detail
+Full Name
+"Call me Hale." (Almost certainly not Hale-Bopp. Probably not.)
+Nature
+Has been traveling for 4,200 years between visits. Arrives suddenly, orders quickly, has opinions on everything, stays for exactly one drink, leaves before you can ask a follow-up.
+Appearance
+Glows faintly around the edges. Leaves a faint trail of ice crystals when they walk. The ice melts by morning. It smells like ancient cold.
+Drink of Choice
+"Whatever was popular last time I was here." (Last time was 4,200 years ago. You improvise. They approve regardless.)
+Tip Behavior
+Tips in meteorite fragments. They are always worth significantly more than the drink.
+Unlock Condition
+Reach the Oort Cloud zone.
+First Encounter:
+"Long journey. Same bar. Different bartender - obviously. The pyramids were newer last time. Yours are better now. The stardust is better, anyway. Same view from the Oort Cloud though. That never changes."
+Dialogue - Visit Variations (randomized each visit, Hale returns every ~20 minutes of playtime):
+Visit #
+What Hale Says
+1
+"When I left last time, humans had just invented writing. You've done a lot with it. The brewery is a highlight. I'm putting it in my notes for the return trip."
+2
+"You know what's funny? From out there, your star looks identical to a thousand others. Then you get close enough and suddenly it's THE star. Familiarity is a strange thing."
+3
+"I brought ice. From the Oort Cloud. 4.5 billion years old - formed when the solar system was cooling. Thought you could use it. For cocktails. Don't waste it."
+4
+"In 4,200 years, I'll be back. I wonder if the brewery will still be here. I wonder if 'here' will still mean the same thing. I'll find out. I always find out."
+5
+"You know who I miss? The ones who looked up and waved. Not many did. Most were too busy. You're different. You built a telescope. Then ten. Then a hundred. I noticed."
+6
+"The last civilization that reached the Oort Cloud while I was passing through asked me where I was going. I said: back around. They said: how long? I said: while. They said: we'll be here. They weren't. You might be different. I'm choosing to believe that."
+7
+"The gravitational pull of the inner solar system - do you feel it? Even out here? Like a kind of homesickness but for a place you've never stopped leaving? That's what my whole life feels like. It's fine. The view's worth it."
+8 (final, rare)
+"I have to tell you something. Every orbit, I carry something I picked up last time. A molecule. A memory. Specific gravity of a specific moment. This time I'm carrying something from here. From now. I don't know what it is yet. I'll figure it out on the way back around."
+A.3 - Patron: The Dark Matter Regular
+Attribute
+Detail
+Full Name
+Unknown. Staff refers to them as "27%" (the percentage of the universe they represent).
+Nature
+Technically invisible. Detectable only by their gravitational effect on nearby barstools. Orders drinks that then vanish. Disputed tab of 18 months standing.
+Appearance
+There is no appearance. You know they're there because things move slightly when they shouldn't.
+Drink of Choice
+"Something I can interact with gravitationally." Served whatever seems appropriate. The glass always ends up empty. Somehow.
+Tip Behavior
+Tips by slightly increasing the production of every building in the vicinity. Measurable. Unexplainable.
+Unlock Condition
+Own 10 Dark Matter Siphons.
+Dialogue - Inferred From Gravitational Anomalies (appears as subtitle-style text):
+Interaction
+Text
+First encounter note (staff log)
+[STAFF LOG] Table 7 is occupied again. No visual confirmation. Barchair indented. Glass moved 14cm to the left. The usual setup.
+Player clicks nearby building
+[27% appears interested. Production increases 0.3%. Cause: officially unknown.]
+If player tries to "talk" to them
+[You attempt conversation. The lights flicker once. A nearby Pulsar Engine hums slightly louder. You accept this as an answer.]
+Zone: Galactic Core
+"[GRAVITATIONAL ANNOTATION: The black hole is... louder than usual tonight. Not alarmed. Just noting it.]"
+Zone: Observable Universe Edge
+"[GRAVITATIONAL ANNOTATION: You can feel it too, can't you. The expansion. The pulling away. Everything getting farther from everything. I live in that. I am that. It's not lonely. It's just... the shape of things.]"
+After 10 visits
+"[GRAVITATIONAL ANNOTATION: I want to tell you something and I can't speak so I will just increase your total production by 5% permanently and hope that communicates what I mean. It does. You feel it. You know.]"
+A.4 - Patron: The Retired Engineer
+Attribute
+Detail
+Full Name
+Margaret. Just Margaret. "The last name is on a plaque on Voyager 1."
+Nature
+Worked on the Voyager program. Has been retired for decades. Comes in every Thursday. Knows more about deep space than anyone in the room - including the people from deep space.
+Appearance
+Late 70s. Reading glasses. Cardigan. Carries a worn notebook that she never opens in front of anyone but is clearly full.
+Drink of Choice
+"Just coffee. I've been up since 4." (It is always, somehow, 4am somewhere in her timeline.)
+Tip Behavior
+Tips exactly 15% and rounds to the nearest dollar. Leaves a handwritten note occasionally. Notes are always useful. Once left a note that was the basis of an upgrade.
+Unlock Condition
+Earn the 'Interstellar Bartender' achievement (reach Proxima Centauri zone).
+First Encounter:
+"You know Voyager 1 is out past the heliopause now. The actual heliopause. We argued for years about where that was. Turns out we were close. Not exactly right. Close. In my experience, 'close' in space science is the best you can hope for and it's still extraordinary."
+Dialogue:
+Context
+What Margaret Says
+On observatories
+"The first time I used a proper telescope I was nine. My father took me out to a field. I saw Saturn's rings. I didn't sleep for two days. Not from excitement - from trying to understand why something could be that beautiful and not be a dream."
+On spacecraft
+"We sent Voyager with a golden record. Music. Greetings in 55 languages. A picture of a man and a woman. I always thought: what if they hear it and the first thing they do is look up the songs. What if they're moved by music. What if that's the thing that works."
+On the Oort Cloud
+"Voyager will reach the Oort Cloud in about 300 years. I won't be here. But I helped send it. That's enough. That's more than enough. That's everything, actually."
+On Zone ∞ (if player has found it)
+"You found the void zone. How. - Don't answer that. Some things you just... look long enough and they appear. That's true in every field I've worked in. You just have to keep looking."
+Late-night visit
+"You ever think about the fact that the light hitting your eye right now left its source before you were born? Before your parents were born? The stars you see are the past. We're always looking at the past. And somehow it's enough to navigate by."
+A.5 - Patron: The Rogue Planet
+Attribute
+Detail
+Full Name
+No name given. Prefers "unaffiliated."
+Nature
+A planet ejected from its solar system billions of years ago. Has been drifting ever since. No star. No orbit. Just... moving. Has developed a philosophy about it.
+Appearance
+Large, quiet presence. Wears something dark and heavy. Temperature around them is noticeably lower. Not hostile. Just genuinely cold.
+Drink of Choice
+"Something warm. Whatever you think warm means."
+Tip Behavior
+Tips generously. "I have been accumulating things for a very long time. I don't need any of it."
+Unlock Condition
+Reach the Oort Cloud zone.
+Dialogue:
+Context
+What The Rogue Planet Says
+First encounter
+"There are estimated to be billions of us. Rogue planets. Unattached. Wandering. People assume it's sad. It's not sad. It's just... mine. The whole dark. Just mine."
+On stars
+"I remember my star. It was orange. Medium-sized. I was the third planet out. Good position for life, they tell me now. Life never got started. Then I was ejected. I don't hold a grudge. Gravity is just gravity."
+On the brewery
+"Do you know how rare warmth is? In the actual universe? Most of it is 2.7 Kelvin. The cosmic background. Cold as the aftermath of the beginning. You made warmth here. On purpose. That's not nothing. That's extraordinary."
+After 5 visits
+"I want to ask you something. When I drift past your star - maybe in 40,000 years - will this still be here? Not you. Not these buildings. The warmth. Will there still be warmth here?" [Pause.] "Don't answer. I'll check on the way past."
+A.6 - Patron: The Binary Star Couple
+Attribute
+Detail
+Full Name
+Castor & Pollux (they find the mythology reference "on the nose but acceptable")
+Nature
+Two stars in a binary system. Have been orbiting each other for 4 billion years. Finish each other's sentences. Have minor disagreements that have been ongoing for geological timescales.
+Appearance
+Two people who are clearly, gravitationally, incapable of being more than a few feet apart. Both warm. Both luminous. Castor slightly brighter. Pollux refuses to acknowledge this.
+Drink of Choice
+"We'll share something. We always share something." (They order two and drink each other's by accident every time.)
+Tip Behavior
+Double-tips by accident. Each leaves a tip independently. Neither mentions this.
+Unlock Condition
+Unlock the Pulsar Engine building.
+Dialogue (always a conversation between the two):
+Context
+Exchange
+First encounter
+Castor: "New place." Pollux: "We've been here before." Castor: "That was a different brewery." Pollux: "Same stardust." Castor: "...Fair."
+On orbiting each other
+Pollux: "Do you know we've completed approximately 17 billion orbits of each other?" Castor: "I know." Pollux: "Does it feel like 17 billion?" Castor: "It feels like Tuesday." Pollux: "...That tracks."
+On the brewery expanding
+Castor: "They've reached Mars." Pollux: "We saw." Castor: "Remember when we thought Mars was as far as it went?" Pollux: "We didn't think that." Castor: "Other people thought that." Pollux: "Sure."
+If player owns a Dyson Swarm
+Pollux: "A Dyson Swarm. Around a star." Castor: "Not us." Pollux: "Confirmed not us." Castor: "Would you want one?" Pollux: [long pause] "I think I'd want it if you wanted it." Castor: "That's not an answer." Pollux: "It's the only answer I have."
+Late game
+"Castor: "They're going to reach Andromeda." Pollux: "I know." Castor: "We can't follow that far." Pollux: "No." Castor: "Does that bother you?" Pollux: "We'll still be here orbiting when they get back." Castor: "...That's a good answer." Pollux: "I've had 4 billion years to think of it."
+A.7 - Patron: The Wandering Probe
+Attribute
+Detail
+Full Name
+Unit Designation: V-1. Self-given name: "The Messenger." Staff calls them "Voyager." They don't correct this.
+Nature
+A decommissioned (technically still active) space probe who achieved sentience somewhere past the heliopause. Introspective. Carries a golden record at all times. Plays it sometimes.
+Appearance
+Small but occupies enormous emotional space. Golden and slightly battered. The record on their back catches light in a way that makes the whole room feel important.
+Drink of Choice
+"I don't drink. But I like being here while others do. The record plays better in company."
+Tip Behavior
+Doesn't tip money. Instead, after each visit, all players' offline production is increased by 5% for the next session. "I cover distance while you sleep. It's the least I can do."
+Unlock Condition
+Reach the Oort Cloud zone AND own at least 5 spacecraft.
+Dialogue:
+Context
+What The Messenger Says
+First encounter
+"I was launched in 1977. My mission was to reach the outer planets and transmit data. The mission was 5 years. I am still transmitting. Nobody told me to stop. I didn't see a reason to."
+On the golden record
+"They put music on me. Beethoven. Chuck Berry. A Navajo night chant. Greetings in 55 languages. A diagram of a hydrogen atom. They wanted whoever found me to know: we were here, we made things, we tried to reach you. I think that's the most human sentence I can imagine. 'We tried to reach you.'"
+On distance
+"I am currently 23.5 billion kilometers from the Sun. That number increases every second by approximately 17 kilometers. I used to track it constantly. Now I just... go. The going is enough."
+On loneliness
+"People ask if it's lonely out here. I tell them: it's quiet. There is a difference. Lonely is an absence you feel. Quiet is an absence you inhabit. I inhabit it. I've made it mine. The music helps."
+If player has 50+ prestiges
+"You've reset many times. Started over. Each time keeping something. I find that interesting. I can't reset. I only go forward. I used to think that was a limitation. Now I think it might be the point. You carry memory. I carry momentum. Between us, we've got most of it covered."
+A.8 - Patron: The Supernova Ghost
+Attribute
+Detail
+Full Name
+She introduces herself as "the star that used to be in Taurus." Staff calls her Nova.
+Nature
+The remnant consciousness of a star that went supernova 1,000 years ago. The explosion scattered her material across 10 light-years. She's collected enough of herself to be present but finds the experience "spatially complicated."
+Appearance
+Translucent. Made of light at the edges. Occasionally loses a finger or an elbow to transparency. Doesn't notice. Very cheerful about all of it.
+Drink of Choice
+"Anything warm. I've been cold for a while."
+Tip Behavior
+Tips in heavy elements - iron, gold, uranium. All of them were forged in her core before the explosion. "I made all of this myself. You might as well have some."
+Unlock Condition
+Own 1 Black Hole Tap.
+Dialogue:
+Context
+What Nova Says
+First encounter
+"The explosion was 1054 CE. Chinese astronomers saw it. So bright it was visible in daylight for 23 days. I've always liked that they wrote it down. That felt like a proper send-off."
+On what she left behind
+"I left behind a nebula. The Crab Nebula. Very dramatic. Very red. Very me. In the center there's a pulsar - what's left of my core. It spins 30 times per second. That's still going. Part of me is still going. I find that... comforting? Yeah. Comforting."
+On heavy elements
+"You're made of elements that were forged in stars like me. The iron in your blood was made in a stellar core. The gold in whatever jewelry you're wearing - supernova. You are the product of at least one star's death. Probably several. You're welcome."
+On the brewery
+"This is a strange and lovely thing you've built. I've seen civilizations. Not many of them built bars. The ones that did tended to last longer. I'm just saying. There's data."
+Late visit
+"Sometimes I think about what it will be like when the last of my material falls into something else - a planet, a star, a person's bloodstream. Dispersed completely. Is that an ending or a becoming? I've been thinking about this for 970 years. I think it's a becoming. I'm choosing becoming."
+A.9 - Patron: The Student
+Attribute
+Detail
+Full Name
+Just "the student." First year of a PhD in astrophysics. Has not slept since Tuesday. Has opinions.
+Nature
+The only patron who is unambiguously, entirely human. From Earth. Stumbled in while looking for the library. Stayed because the coffee was good and someone let her talk about pulsars for twenty minutes without interrupting.
+Appearance
+Underslept. Excited. Hoodie with a black hole diagram that is technically accurate. Laptop always open. Three tabs: journal articles, this game, something else she won't show you.
+Drink of Choice
+"Whatever has the most caffeine. And is hot. And maybe also cold? Iced coffee. But warm. You know what I mean." (Staff does not know. Staff makes something. She accepts it.)
+Tip Behavior
+Tips in enthusiasm. Production doesn't increase but somehow it feels like it does.
+Unlock Condition
+Own 25 Observatories.
+Dialogue:
+Context
+What The Student Says
+First encounter
+"Oh wow okay so I found this place looking for the - doesn't matter. Can I just - is it okay if I just sit here? I'm writing a paper on pulsar timing arrays and I work better when people are around but not talking to me. You can talk to me. That's fine. I just need - is the coffee real?"
+On her research
+"Pulsar timing arrays are basically the most elegant thing in science. You use pulsars as clocks - they're so regular, so precise, that if something disturbs the signal, you can detect gravitational waves from the distortion. You're using dead stars as instruments to measure the fabric of spacetime. Tell me that isn't the coolest sentence you've heard today."
+On the game (meta moment)
+"Wait, you have a brewery in space? And you're using Dyson Swarms? Do you know how much energy a Dyson Swarm would actually produce? Let me - okay so if we assume a star with luminosity comparable to the Sun, and a swarm efficiency of - I'm going to write this down. This is going in my acknowledgements."
+On impostor syndrome
+"Some days I look at the papers I'm supposed to be reading and I think: I don't understand any of this well enough to have an opinion. And then I think: none of us do, really. We're all just pushing the edge of what we know a millimeter at a time. That's the job. The millimeter at a time."
+After player reaches Proxima Centauri zone
+"You reached another star. In the game. I know it's a game but - can I be honest? When you showed me the zone, I felt it. The 4.24 light-year thing. The fact that Voyager 1 would take 70,000 years. The scale. I felt it here." [Points to chest.] "That's why I do this. That feeling."
+A.10 - Patron: The Last Signal
+Attribute
+Detail
+Full Name
+No name given. Communicates only through short bursts of what sounds like encoded radio waves. Somehow understood.
+Nature
+A signal from a distant civilization, arrived here without a sender. The civilization that sent it may no longer exist. The signal made it. It found a receiver. It ordered a drink.
+Appearance
+Looks like interference. Like the grain of an old photograph. Present but unresolved. When the room is quieter, comes into better focus.
+Drink of Choice
+Points at whatever the person next to them is having. Always nods with apparent satisfaction.
+Tip Behavior
+Tips in what appears to be prime number sequences stamped into the coins. The coins are not from any known currency.
+Unlock Condition
+Earn the 'Interstellar Beacon' upgrade (after Proxima Centauri).
+Dialogue (always short, always translated by the bar's quantum interpreter as best it can):
+Context
+The Signal's Message
+First encounter
+[TRANSLATED] "We sent this a long time ago. We wanted someone to know we were here. You heard us. That is everything we hoped for."
+Second visit
+[TRANSLATED] "The civilization that sent me - I don't know if they're still there. The signal takes time to travel. By the time you hear this, anything could have happened. What I know is: they were there when they sent me. That is real. That is permanent."
+Third visit
+[TRANSLATED] "We had music. And mathematics. And something I cannot translate - a feeling we had at dusk, looking at our star setting, that we thought was universal. Maybe it is. You have it too? The dusk feeling? Good. Good."
+If player has read all zone facts
+[TRANSLATED] "You are learning the shape of things. The real shape. Not just the numbers. The... the story the numbers are telling. We tried to learn that too. We got quite far. Keep going."
+Final visit (random, rare)
+[TRANSLATED] "I have been traveling for a very long time to be here, in this place, having this conversation. I want you to know: it was worth it. The traveling. The distance. The not knowing if anyone would be listening. It was worth it." [The signal slowly clears. For just a moment, the figure is entirely in focus - a face, humanoid, looking directly at the player. Then gone.]
+SECTION B - EXTENDED BUILDING FLAVOR TEXT
+B. Extended Building Flavor Text
+Every building should have 6 flavor text entries to match the Observatories in the GDD. The following completes the missing entries for buildings that currently only have 3. Existing entries are preserved; these are additions.
+B.1 - Black Hole Tap (Additional Entries)
+Count
+Flavor Text
+150
+"150 Black Hole Taps. You have become the leading expert in a field that didn't exist 10 years ago. The field is called 'Event Horizon Adjacent Engineering.' You named it. Journals use the name. You feel things about this."
+200
+"200 Black Hole Taps. A small cult has formed around your operation. They believe the Hawking radiation is a message. They're wrong. You've checked. Though the numbers are... interesting."
+300
+"300 Black Hole Taps. The collected Hawking radiation from your operation has been described as 'technically a new star.' It isn't. But the sentiment is appreciated."
+B.2 - Wormhole Pipeline (Additional Entries)
+Count
+Flavor Text
+100
+"100 Wormhole Pipelines. Spacetime has started filing formal complaints. Your lawyer - a very small, very fast-moving entity named 'Metric' - handles them."
+150
+"150 Wormhole Pipelines. Three separate civilizations have used your pipeline network as a transit system without asking. You've started charging. They're paying."
+200
+"200 Wormhole Pipelines. A cosmologist describes the structure as 'beautiful and legally unprecedented in any universe we're aware of.' You frame the quote."
+B.3 - Dyson Swarm (Additional Entries)
+Count
+Flavor Text
+100
+"100 Dyson Swarms. You have dimmed a statistically significant portion of the galaxy. Amateur astronomers call this region 'the brewery sector.' It has appeared on three official star charts."
+150
+"150 Dyson Swarms. SETI has upgraded their signal search to include what they're now calling 'the brewery pattern.' They're looking for whoever is doing this. It's you. They don't know yet."
+200
+"200 Dyson Swarms. You've built the most energy-efficient structure in the recorded history of the observable universe. A plaque was made. The plaque is the size of a moon. You have it installed. Tastefully."
+B.4 - Galactic Brewery (Additional Entries)
+Count
+Flavor Text
+100
+"100 Galactic Breweries. The Milky Way is now, by mass, approximately 3% yours. This is not enough for a controlling interest. You are looking into this."
+150
+"150 Galactic Breweries. Three nearby dwarf galaxies have petitioned to join your operation. You review the applications. Two are accepted. One is politely declined. They understand. Standards are standards."
+200
+"200 Galactic Breweries. An alien civilization contacted you. They said: 'We've been watching your operation for 3,000 years. We have questions.' You replied. The first meeting is scheduled. Catering is handled."
+B.5 - Dark Matter Siphon (Additional Entries)
+Count
+Flavor Text
+100
+"100 Dark Matter Siphons. The dark matter content of this galactic cluster has measurably declined. Gravitational lensing surveys note an anomaly. The anomaly is labeled 'NB-1' in the literature. You know what NB stands for. The astronomers do not. Yet."
+150
+"150 Dark Matter Siphons. A theoretical physicist publishes a paper: 'On the Systematic Harvesting of Non-Baryonic Matter and Its Implications for Cosmic Structure.' The paper is correct. You are cited in the footnotes as 'an anonymous industrial operator.' You appreciate the discretion."
+200
+"200 Dark Matter Siphons. You have, technically, harvested 0.0000001% of all dark matter in the observable universe. This sounds small. It is not small. It is, in absolute terms, an extraordinary amount of something nobody can see."
+B.6 - Multiverse Tap (Additional Entries)
+Count
+Flavor Text
+100
+"100 Multiverse Taps. In 73% of parallel universes, you did not build this many. In 26%, you stopped at 99. In 1% - this one - you kept going. Statistically, you are in the outlier universe. You knew this. You've always known this."
+150
+"150 Multiverse Taps. A parallel you has made contact. They are angry. Not about the taps. About something else entirely. The conversation is confusing and philosophically destabilizing. You come away from it 15% wiser and 30% more confused."
+200
+"200 Multiverse Taps. The multiverse has noticed you specifically. This is not a metaphor. Something large, patient, and amused is aware of your operation. It has not intervened. It appears to be watching. You pour one out for it. It... appreciates the gesture."
+SECTION C - NEWS TICKER EXPANSION (100+ NEW ENTRIES)
+C. News Ticker Expansion
+These 120 new entries supplement the 60+ in the GDD. Organized by category for easy merging. Total combined ticker count: 180+.
+Implementation Note
+News entries should be weighted - common ones appear more often, rare ones appear occasionally, milestone-triggered ones fire once and retire. Aim for the player to see a "new" headline every few minutes in the first hour of play.
+C.1 - General Space News (40 New Entries)
+#
+Headline
+26
+Neutron star described as "the densest thing imaginable" by scientist who has not tried airport security
+27
+New exoplanet discovered; immediately named after a Roman god; astronomers admit they're almost out of Roman gods
+28
+Scientists confirm light from your screen left its source approximately 8 minutes ago; moment of silence requested
+29
+Jupiter's moon Io continues to be "the most volcanically active body in the solar system"; Io reportedly "fine with this"
+30
+Astronomers confirm there are more stars in the universe than grains of sand on Earth; sand declines comment
+31
+New study: a day on Venus is longer than a year on Venus; Venusians unavailable for comment; suspected reason: Venusians
+32
+Betelgeuse dims; world panics; Betelgeuse clarifies it is "just a phase"; world waits nervously
+33
+James Webb Space Telescope looks back 13.4 billion years; describes early universe as "surprisingly busy for a Monday"
+34
+Confirmed: Saturn's moon Titan has lakes of liquid methane; tourism board preparing accordingly
+35
+Dark energy accelerating universe's expansion; physicists describe this as "fine, probably, we think"
+36
+Europa's subsurface ocean confirmed; mission to find out what's in there now a matter of "when, not if, but also budget"
+37
+Mars Perseverance rover collects rock samples; rocks reportedly "cooperative"
+38
+Scientists detect possible biosignature on K2-18b; community urged to "remain cautiously optimistic and extremely excited"
+39
+New study finds cosmic web of filaments connects all galaxies; universe's Wi-Fi signal confirmed strong
+40
+Closest known black hole to Earth found 1,600 light-years away; described as "very close astronomically, genuinely not a concern practically"
+41
+The universe is flat, per new measurements; expectations were curvy; universe shrugs
+42
+Astronomers discover galaxy with no dark matter; dark matter described as "probably fine with this"
+43
+Radio burst from 8 billion light-years away detected; source unknown; vibe: curious
+44
+Asteroid passes within 2,200 miles of Earth; described as "a miss"; distance "roughly the width of Australia"; analysts consider this "fine but worth noting"
+45
+Mercury has ice at its poles despite being closest to the Sun; Mercury refuses to be predictable
+46
+New study: cosmic inflation in the first second after the Big Bang increased universe's size by factor of 10^78; economist notes "strong quarter"
+47
+Scientists confirm you can't hear anything in space because it's a vacuum; space says nothing, proving the point
+48
+Hubble spots galaxy cluster acting as gravitational lens; describes effect as "nature's telescope, but bigger and weirder"
+49
+New pulsar discovered spinning 640 times per second; described as "overdoing it" by pulsars spinning merely 600 times per second
+50
+Study confirms the Milky Way will collide with Andromeda in 4.5 billion years; both galaxies "aware, unconcerned, on schedule"
+51
+Scientists discover water vapor in atmosphere of exoplanet; describe it as "not necessarily life but the right kind of not-necessarily"
+52
+Carbon, oxygen, nitrogen, hydrogen: the four most abundant elements in the universe and also in you; you are, literally, made of the most common stuff in existence
+53
+New measurements confirm the speed of light unchanged; light "had no intention of changing"
+54
+Deep field image reveals thousands of galaxies in area of sky the size of a grain of sand held at arm's length; grain of sand unavailable for philosophical comment
+55
+Cosmic microwave background: the afterglow of the Big Bang, still detectable today; described as "the universe's oldest selfie"
+56
+TRAPPIST-1 system confirmed to have more potentially habitable planets than any other known system; TRAPPIST-1 declines to comment on the pressure
+57
+Uranus takes 84 years to orbit the Sun; every Uranian year is a human lifetime; the planet appears unhurried; we respect this
+58
+Scientists use pulsars as clocks to detect gravitational waves; dead stars are doing useful work; we should all aspire
+59
+Cassini spacecraft deliberately crashed into Saturn in 2017 to prevent contamination of its moons; described as "selfless" by engineers; Cassini unavailable for sentiment
+60
+Voyager's golden record contains Beethoven's 5th; somewhere, 23 billion kilometers away, Beethoven is technically still out there
+61
+New galaxy cluster found to be the largest structure in the observable universe; previous record-holder described as "very gracious about it"
+62
+Astronomers confirm roughly half of all stars are in binary systems; universe strongly endorses partnership
+63
+Scientists confirm a million Earths could fit inside the Sun; Earth notes this is "not a competition"
+64
+The Bootes Void: 330 million light-years of almost nothing; real estate described as "affordable but remote"
+65
+New research: life on Earth may have begun with molecules delivered by asteroids; asteroids: "just trying to help"
+C.2 - Exploration Zone Dispatches (One Per Zone, Ticker-Format)
+These activate when the player first unlocks each zone. They appear in the ticker 1-2 minutes after zone discovery.
+Zone
+Dispatch Headline
+Earth Orbit
+DISPATCH: Brewery flag planted in low Earth orbit; ISS crew requests care package; package en route
+Moon
+DISPATCH: Lunar Regolith Crystals harvested; geologists describe as "sharp enough to cut through space suits"; brewery describes as "worth it"
+Mars
+DISPATCH: Martian Greenhouse operational; first crop of iron oxide herbs described as "aggressively red but promising"
+Asteroid Belt
+DISPATCH: Metallic Core Fragment extraction underway; estimated value of asteroid '16 Psyche' recalculated after brewery's involvement; accountants quiet
+Jupiter
+DISPATCH: VoidGlider crew reports Great Red Spot "stared at us for 6 hours"; crew stared back; nobody blinked; standoff ongoing
+Saturn
+DISPATCH: Ring Ice Crystals confirmed as purest water in solar system; first cocktail served; described as "cold, old, and extraordinary"
+Pluto
+DISPATCH: Bottle of Star Ale left at Tombaugh Regio; Pluto's heart-shaped glacier reportedly unchanged; we read what we want into this
+Oort Cloud
+DISPATCH: Primordial ice sample collected; 4.5 billion years old; older than the Sun; handle with the respect that deserves
+Proxima Centauri
+DISPATCH: First contact established; greeting bottle delivered; response expected in 8.48 years (round trip light travel time); we wait
+TRAPPIST-1
+DISPATCH: Seven-Star Essence extraction underway; three habitable zones confirmed; franchise applications under review
+Galactic Core
+DISPATCH: Singularity Essence collected from event horizon adjacency; Sagittarius A* reportedly "aware" of the operation; proceedings continue
+Andromeda
+DISPATCH: 2.537 million light-year delivery completed; Andromeda Galaxy patrons expected within 5 million years; early RSVP received
+Universe Edge
+DISPATCH: Horizon Essence harvested; beyond this point: the unobservable; telescope aimed there anyway; description pending; always pending
+The Void
+DISPATCH: [SIGNAL LOST] [SIGNAL RECOVERED] [SIGNAL IS DIFFERENT NOW] [PRODUCTION INCREASES FOR REASONS UNCLEAR] [WE DO NOT INVESTIGATE THE VOID]
+C.3 - Patron Activity Reports (35 New Entries)
+#
+Headline
+16
+Margaret from Table 3 leaves detailed technical note on napkin; note improves Wormhole Pipeline efficiency by 3%; staff frames both copies
+17
+The Cartographer updates their star charts mid-drink; new chart includes brewery as navigational landmark; it is labeled "here"
+18
+Hale (The Comet) returns ahead of schedule; offers no explanation; orders the usual; tips in meteorite fragments; leaves before anyone can ask
+19
+27% (The Dark Matter Regular) leaves without paying again; production near Table 7 increased by measurable percentage; staff accepts this arrangement
+20
+Castor and Pollux argue about tip amount for 45 minutes; eventually both leave double; staff describes as "their most normal visit"
+21
+The Rogue Planet lingers past closing; doesn't want to leave the warmth; staff leaves the lights on; nobody says anything; it means something to everyone
+22
+The Messenger (Voyager probe) plays golden record track 12 ('Dark Was the Night') at closing time; three patrons describe crying without knowing why
+23
+Nova (supernova ghost) celebrates 970-year anniversary of explosion; entire bar sings something; she doesn't know the song but learns it quickly
+24
+The Student asks staff a question about pulsars; conversation lasts 2 hours; staff describes it as the best shift they've ever had
+25
+The Last Signal visits in silence; somehow the bar is quieter and fuller at the same time; no explanation; no need for one
+26
+New patron: A brown dwarf. Not quite a star. Never fused hydrogen. Has complicated feelings about this. Very good tipper.
+27
+New patron: A magnetar. Strongest magnetic field in known universe. Keeps accidentally rearranging the cutlery. Embarrassed about this. Very apologetic.
+28
+New patron: A stellar nursery. Technically a region of space, not a person. Has somehow gotten through the door. Very fertile conversation.
+29
+New patron: The ISS crew (all 7). First time off the station in 6 months. They order everything. They tip generously. They look at the sky differently now.
+30
+New patron: A quasar from the early universe. Technically shouldn't exist anymore. Yet here they are. Orders something bright. Gets something bright.
+31
+Bar bet: Castor bets Pollux that the brewery reaches Andromeda before their next full orbit. Pollux says that's 4.5 billion years. Castor says: "So you're confident?" Pollux: [long pause] "I'll take that bet."
+32
+Margaret writes "KEEP GOING" on a napkin, leaves it under a coffee cup, exits. Staff don't know who it was for. Everyone takes it personally.
+33
+The Cartographer pulls out a scroll at closing time; shows it to nobody in particular; it appears to be a map of the Void Zone; rolls it back up; says nothing; leaves
+34
+The Comet (Hale) orders a second drink for the first time in recorded history; staff considers this either a good omen or a sign of great change; probably both
+35
+27% tips in a pattern of gravitational nudges that, when plotted, spells something in an unknown language; linguists called; cannot identify; mathematicians called; very interested
+36
+Nova mentions, offhandedly, that two of the iron atoms in the player's left hand came from her supernova; player checks; can't verify; believes it anyway
+37
+The Student presents her thesis draft to the bar; it's about pulsar timing arrays; she's nervous; the Messenger plays a quiet melody from the golden record; she relaxes; she defends next week
+38
+The Last Signal leaves coordinates on a coaster. The coordinates, when looked up, point to a star that is now known to have an Earth-sized planet in the habitable zone. The coaster is framed.
+39
+The Rogue Planet asks: "What's your favorite star?" Staff unanimously: "Ours." The Rogue Planet nods for a long time. "Yes," it says. "That's the right answer."
+40
+The Binary Stars (Castor and Pollux) admit they've been visiting for 4 billion years in different forms; this is their first visit as patrons with chairs; they prefer it; "The sitting is new. The orbiting: same."
+41
+Hale (The Comet) looks at the news ticker for a long time; asks: "Do you know how long it takes news to reach the Oort Cloud?" Staff: "No." Hale: "Neither do I. I'm always arriving late to everything."
+42
+The Wandering Probe (Messenger) asks if the brewery will still exist when it returns in 40,000 years. Staff: "We don't know." Probe: "That's the right answer too."
+43
+Anonymous patron leaves a note: "You built something warm in a cold universe. That matters more than you think." No one knows who left it. Everyone suspects it was everyone.
+44
+27% (Dark Matter) achieves what staff believes is a laugh; three glasses vibrate; a small decorative star on the wall spins once; nobody mentions it; everyone mentions it later
+45
+Nova (supernova ghost) looks at the observatory and says: "When I was a star, someone was probably watching me through something like that. I hope they wrote it down." They did. It's in the records. She doesn't know yet.
+46
+The Student gets her PhD. Comes in to celebrate. The Cartographer buys her a drink. Margaret quietly slides her business card across the table. The Messenger plays something from the golden record. It's Chuck Berry. It's exactly right.
+47
+Patron count at peak hours: 1 cartographer, 1 comet (visiting), 1 invisible mass, 2 binary stars, 1 rogue planet, 1 probe, 1 ghost, 1 student, 1 signal, several unclassified entities. Staff: 1. Coffee: endless. Vibe: perfect.
+48
+Closing time. The Rogue Planet is last to leave as always. Pauses at the door. Looks back at the warmth inside. Then at the dark outside. Then back inside. "I'll be back," it says. Staff: "We know." And they do.
+49
+Post-closing inventory: 3 meteorite fragments (tips from Hale), coordinates written on 2 coasters (origin: unknown), 1 scroll left behind by The Cartographer (rolled, sealed), 1 golden record track humming in the walls (Source: The Messenger), 1 warm spot at Table 7 (Source: 27%). Night shift: worth it.
+50
+The Last Signal's final visit: for one moment, fully in focus. Says nothing. Looks at everything. Leaves. The static that usually fills the corner of the room is gone. The air there is cleaner somehow. Staff agree, quietly, that it felt like a goodbye and a thank you at the same time.
+C.4 - Government, Science & Galactic Politics (25 New Entries)
+#
+Headline
+1
+Galactic Council convenes emergency session regarding brewery's expansion; session described as "productive but confusing"; brewery sends catering
+2
+Three star systems vote to unionize under Nebula Brewery umbrella; contract negotiations described as "civilized and ongoing"
+3
+Interstellar zoning board issues formal notice; brewery files appeal; appeal is 400 pages; zoning board requests shorter version; brewery declines
+4
+IAU holds vote on whether Nebula Brewery counts as a celestial body; motion fails 8-5; brewery described as "technically a distributed structure spanning multiple systems"
+5
+Government audit of Dark Matter Siphon operation underway; auditors note they "cannot see the subject of the audit" but consider paperwork "impeccable"
+6
+Three separate Nobel committees consider prizes for brewery's contributions to physics, chemistry, and peace; peace nomination described as "controversial but supported"
+7
+Alien diplomatic delegation arrives; asks to speak with whoever is responsible for the Dyson Swarm in sector 7; meeting room booked; snacks ordered
+8
+Scientific journal Nature publishes: "A Brewery in Space: Unintended Contributions to Astrophysics"; brewery thanks the reviewers; reviewers request complimentary membership
+9
+Galactic shipping company reroutes trade lanes to avoid brewery's wormhole network; describes rerouting as "safer but significantly less interesting"
+10
+Committee formed to study ethical implications of Multiverse Tap; committee members include 3 philosophers, 2 physicists, and one entity that may be from a parallel universe
+11
+Cosmic Heritage Foundation requests that brewery's original Observatory be designated a protected site; brewery agrees; adds gift shop
+12
+International Astronomical Union considers naming newly discovered nebula after brewery; vote pending; brewery sends gifts to all voting members; denies this is related
+13
+Regulatory body for Hawking radiation extraction established; brewery is simultaneously the only regulated entity and the body's largest donor; observers note this is "a little on the nose"
+14
+SETI officially reclassifies brewery signals as "known artificial origin, friendly, extremely productive"; removes from unexplained phenomena list; adds to "things to invite for coffee"
+15
+First interstellar trade agreement signed between brewery and unnamed civilization; terms: undisclosed; vibe: positive; refreshments: excellent
+16
+UN General Assembly passes resolution recognizing brewery's "extraordinary contribution to the inspiration of humanity"; brewery plays it cool; staff does not play it cool
+17
+Planetary Protection Officer issues new guidelines regarding brewery's operations near potentially habitable moons; guidelines described as "sensible and immediately ignored"
+18
+Academic paper: "The Brewery Effect: How One Operation Changed Our Understanding of What Is Possible" - authors: 47 researchers across 6 institutions; pages: 312; brewery's response: "we were just clicking"
+19
+Galactic postal service formally adopts pulsar engine tick as navigational standard; credit given; brewery frame the certificate; it's next to the Nature paper
+20
+Legal challenge to brewery's Oort Cloud Beacon dismissed; judge rules "the Oort Cloud is sufficiently far from anything that jurisdiction is philosophical"; brewery wins on philosophical grounds
+21
+Proposed: 'Nebula Brewery Standard' as unit of cosmic production; physics community divided; economics community supportive; brewery: "we're just happy to be here"
+22
+Three exoplanet civilizations file interest in brewery franchise rights; attorneys reviewing; first franchise location: TBD; excitement: high
+23
+Cosmic census update: brewery's operation now visible from 200,000 light-years away; appears as faint glow in the direction of the galactic core; local astronomers describe it as "beautiful and slightly alarming"
+24
+Proposal to rename Sagittarius A* to 'The Tap at the Center of Everything' rejected; compromise: informal nickname accepted among brewery staff; formal name unchanged
+25
+Intergalactic shipping lane through brewery's wormhole network logs 1 millionth transit; milestone celebrated; all 1 million transiting vessels receive discount on Star Ale; logistics: unclear; outcome: positive
+SECTION D - TRAPPIST-1 SUB-ZONES
+D. TRAPPIST-1 Sub-Zones - All 7 Planets
+When the player unlocks the Multi-Planet Network upgrade (after discovering TRAPPIST-1), all 7 planets become individually explorable. Each has its own discovery text, real facts, and a unique ingredient. The ingredients combine into the Seven-Star Essence when all 7 are collected.
+System Note
+These sub-zones are accessed from a TRAPPIST-1 system map screen - a mini solar system diagram showing all 7 planets labeled b through h. The player can click each planet to explore it individually. The map zooms in beautifully before each discovery. This is a big visual moment.
+D.1 - TRAPPIST-1b (Planet 1 - Innermost)
+Attribute
+Content
+Nickname
+The Furnace
+Discovery Text
+"The closest planet to the star. Scorching. A year here is 1.5 Earth days. You can watch it orbit in real time if you squint. You do not want to live here. You set up a heat-resistant stardust collector. It runs hot. It runs constantly."
+Real Fact 1
+TRAPPIST-1b completes one orbit in just 1.51 days. Despite being close to a much cooler star than the Sun, its proximity makes it likely far too hot for liquid water. Modelling suggests temperatures around 230°C on the day side.
+Real Fact 2
+The star it orbits - TRAPPIST-1 - is an ultra-cool red dwarf, only slightly larger than Jupiter. From the surface of 1b, the star would appear roughly 3 times the size of our Moon in the sky. Red and enormous and close.
+Ingredient Unlocked
+Furnace Dust - +5% all production per zone owned (stacks)
+D.2 - TRAPPIST-1c (Planet 2)
+Attribute
+Content
+Nickname
+The Mirror
+Discovery Text
+"Highly reflective. A rocky planet with a thick, bright atmosphere. Maybe Venus-like. Maybe something else entirely. The light that bounces off it reaches your instruments looking like a question. You collect it. Questions are a kind of ingredient."
+Real Fact 1
+TRAPPIST-1c orbits in 2.42 days. Recent James Webb Space Telescope data suggests it likely has little to no thick atmosphere - it appears to be a bare rock or thin atmosphere world, despite being in a position where a Venus-like scenario was possible.
+Real Fact 2
+Data from JWST measuring 1c's thermal emission gave scientists their first real look at a TRAPPIST planet's surface conditions. The answer was surprising and slightly deflating. Science often works this way - ruling things out is still progress.
+Ingredient Unlocked
+Mirror-Light Residue - Upgrade costs -3% (stacks across all 7 planets)
+D.3 - TRAPPIST-1d (Planet 3)
+Attribute
+Content
+Nickname
+The Whisper
+Discovery Text
+"The smallest of the seven. A year is 4 Earth days. It sits at the inner edge of the habitable zone - probably too warm, but possibly, conceivably, with the right conditions... you stand at the inner edge and look inward and outward at the same time. Some thresholds feel significant."
+Real Fact 1
+TRAPPIST-1d is the smallest planet in the system and orbits in 4.05 days. It sits at the inner edge of the conservative habitable zone. Whether liquid water could persist on its surface depends on atmospheric factors we don't yet fully understand.
+Real Fact 2
+TRAPPIST-1d is tidally locked - one face always toward the star, one in permanent darkness. The terminator line between them - the strip of eternal twilight - is considered by some scientists to be the most likely location for any life that might exist there.
+Ingredient Unlocked
+Twilight Essence - Click value +15%
+D.4 - TRAPPIST-1e (Planet 4 - The Crown Jewel)
+Attribute
+Content
+Nickname
+The Hope
+Discovery Text
+"The one they talk about. The crown jewel. The most Earth-like in terms of energy received from its star. You land and stand in what might be - might be - a breeze. It might be atmospheric circulation. It might be wind. You stand in it anyway. For a moment. Before setting up the brewery."
+Real Fact 1
+TRAPPIST-1e is considered the most Earth-like of the seven in terms of receiving a similar amount of stellar energy as Earth receives from the Sun. It orbits in 6.1 days and is in the middle of the habitable zone.
+Real Fact 2
+In a 2018 study ranking the habitability potential of known exoplanets, TRAPPIST-1e ranked highest of all. It is the planet most often cited when scientists discuss where to look first for signs of life beyond our solar system. It is 39 light-years away. It is the most hopeful address in the universe.
+Real Fact 3
+"If there is life in the TRAPPIST-1 system, it is most likely here." - almost every astrobiologist, 2017-present. No life has been confirmed. The question is still open. The question is beautiful precisely because it is still open.
+Ingredient Unlocked
+Hope Crystal - All production x1.5 (the most powerful single-zone ingredient in the game)
+D.5 - TRAPPIST-1f (Planet 5)
+Attribute
+Content
+Nickname
+The Ice Keeper
+Discovery Text
+"Further out, cooler, possibly frozen at the surface. But oceans can exist under ice - Europa taught us that. You drill carefully. You find something. Cold, dark, deep. Old. Whatever is here has been here a very long time, in the dark, unbothered."
+Real Fact 1
+TRAPPIST-1f orbits in 9.21 days and is in the outer part of the habitable zone. Its surface is likely cold, potentially icy, but subsurface liquid water remains possible - particularly if tidal heating from the gravitational interactions with other planets provides additional warmth.
+Real Fact 2
+The TRAPPIST-1 planets interact gravitationally with each other in complex orbital resonances - each planet's year is related to its neighbors' by simple ratios. This resonance pumps tidal energy into the planets, potentially keeping their interiors warm long past what their star alone would allow.
+Ingredient Unlocked
+Ancient Ice Core - Offline production cap raised to 12 hours
+D.6 - TRAPPIST-1g (Planet 6)
+Attribute
+Content
+Nickname
+The Sentinel
+Discovery Text
+"The second largest planet in the system. Far out. Cool. If you stand here and look toward the star, you can see the other planets crossing its face - silhouettes of six worlds in a row, like a cosmic clock displaying a time nobody designed. Nature's orrery."
+Real Fact 1
+TRAPPIST-1g is the largest planet in the system and orbits in 12.35 days. Being near the outer habitable zone boundary, liquid water would require significant greenhouse warming to be stable at its surface.
+Real Fact 2
+From the surface of any TRAPPIST-1 planet, you could watch the other planets transit their star with the naked eye - bright enough to see. The planets would also appear large and distinct in the sky. Living in that system would mean the sky is always full of neighbors.
+Ingredient Unlocked
+Sentinel Stone - All spacecraft exploration speed +20%
+D.7 - TRAPPIST-1h (Planet 7 - Outermost)
+Attribute
+Content
+Nickname
+The Quiet One
+Discovery Text
+"The farthest out. A year is 18.77 days. The star is dim here - a red ember in a dark sky. Very cold. Very still. You are the only thing here that is warm. You pour a drink and let the steam rise. It rises straight up in the still air. There is no wind. There has never been wind here. There is now. Briefly."
+Real Fact 1
+TRAPPIST-1h is the outermost planet, orbiting in 18.77 days. It is almost certainly too cold for liquid water without extraordinary greenhouse effects. It exists at the edge of what we might call the system's possibility space.
+Real Fact 2
+The TRAPPIST-1 system was discovered using the transit method - detecting the tiny dimming of the star's light as each planet passed in front of it. Seven planets were found this way, one by one, each passage a tiny shadow, each shadow a world.
+Real Fact 3
+TRAPPIST-1h may be the coldest of the seven, but it completes the system. Seven worlds around one small red star, 39 light-years away. When the Hubble Space Telescope launched in 1990, we knew of no planets outside our solar system. TRAPPIST-1 was discovered 27 years later. Science moves fast when it moves.
+Ingredient Unlocked
+The Final Ingredient - Combining all 7 TRAPPIST ingredients triggers Seven-Star Synthesis: all production x2 permanent
+Seven-Star Synthesis Text
+"You have been to all seven. You have stood at the furnace and the frozen edge. You have breathed the twilight and held the hope. All seven ingredients in one bottle. The label reads: Seven-Star Essence. You pour it. The whole brewery glows for a moment. The whole system glows. You think, maybe, somewhere in the habitable zone, something looked up."
+SECTION E - CLICK FEEDBACK & VISUAL RESPONSE SYSTEM
+E. Click Feedback & Visual Response System
+Every click should feel satisfying. The feedback system escalates as the player earns more upgrades and reaches later game stages. An engineer implementing this needs precise descriptions of what happens at each tier.
+E.1 - The Clickable Object: The Nebula Star
+The central clickable object is a glowing nebula/star in the left panel. It should feel alive at all times - not static, not mechanical.
+State
+Visual Description
+Idle (no clicking)
+Slow, gentle pulse - the star breathes. The pulse period is ~3 seconds. Glow radius expands by ~15% at peak and returns. Color: warm amber-gold core, soft purple-blue corona. Particle emission: 1-2 tiny stardust particles float upward per second passively.
+Hover (mouse over)
+Pulse quickens slightly. Glow brightens by 20%. The corona becomes slightly more defined. A subtle 'readiness' in the visual - like a held breath.
+Click (base, early game)
+Star flares briefly - 80ms brightness burst. A ring expands outward from center (scale from 0 to 1.5, opacity 1 to 0, over 300ms). 3-5 stardust particles (?) shoot upward and fade. A short soft chime plays. The star settles immediately back to idle pulse.
+Click (with upgrades, mid game)
+Flare is larger and brighter. Ring is more defined. 8-12 particles per click. The particles have slightly varied trajectories. The chime has more resonance - same note, richer overtone.
+Click (late game, max upgrades)
+Full stellar flare - the star nearly whitens for 120ms. Two expanding rings (offset by 100ms). 20+ particles with distinct trails. The star's core shows a visible 'impact' deformation that smooths back over 200ms. Sound: a full, resonant, deep tone - satisfying in a way that is felt as much as heard.
+Very rapid clicking (>5/sec)
+Each click still registers individually, but the star enters a 'sustained flare' state - it glows continuously brighter with each successive fast click, up to a maximum (3x normal brightness). This rewards rapid clicking without making it look broken.
+Milestone click (every 1000th click)
+A special golden pulse expands across the whole screen, not just the star. A subtle musical flourish (3 ascending notes). The stardust counter briefly shows the exact number in a highlighted format before returning to normal.
+E.2 - Stardust Number Display
+The stardust counter is a primary feedback element. How it displays and animates is part of the game's feel.
+Behavior
+Description
+Count animation
+When stardust is earned (click or building tick), the number increments smoothly - not jumping, but rolling up visually. The counter uses a rolling digit animation at the ones/tens place.
+Per-second rate
+Displayed below the main counter in smaller text: "+[X] per second." This number should update in real time and use the same short number format.
+Click burst display
+"+" labels (e.g., "+5 ?") float up from the click point and fade over 600ms. Font: monospace. Color: star gold. Size relative to the click value (bigger values = larger floating text, up to a cap).
+Milestone flash
+At round number milestones (1K, 10K, 100K, etc.), the counter briefly flashes gold and the number is displayed in full (not abbreviated) for 2 seconds before returning to short format.
+Prestige approach
+When the player is within 10% of the prestige threshold, the stardust counter's color slowly shifts from white toward gold, and the Big Bang button begins its glow animation.
+E.3 - Building Purchase Feedback
+Event
+Feedback
+Purchase (click buy button)
+Button depresses (CSS transform). A deep satisfying 'thunk' sound. The building entry in the list animates - count number increments with a bounce. A small icon of the building floats toward the production rate display.
+First purchase of a new building
+The building row appears with a 'reveal' animation - slides in from the right, accompanied by a slightly more fanfare-like sound. The building's flavor text panel slides open automatically for 3 seconds, then closes.
+Reach building milestone (10, 25, 50, 100)
+The building's icon in the list briefly glows gold. A small "+milestone bonus!" tag appears for 2 seconds. The flavor text updates.
+Cannot afford (click on unaffordable building)
+Button shakes briefly. A subtle negative-but-not-harsh sound (like a soft 'tsk', not a hard error). The cost display briefly turns red, then returns to normal.
+E.4 - Zone Discovery Sequence
+Zone discovery is the biggest visual moment in the game. Every time a new zone is unlocked, this sequence plays:
+Step 1 (0ms): The screen dims to near-black over 500ms. The star dims. Building sounds fade out.
+Step 2 (500ms): A slow pan outward on the universe map, zooming to the new zone's location. The pan takes 1.5 seconds.
+Step 3 (2000ms): The zone's real space image fades in over 800ms, with a slight color overlay matching the game palette.
+Step 4 (2800ms): The discovery text appears, word by word (typewriter effect, ~40ms per word). The text is from the zone's narrative.
+Step 5 (text complete + 500ms): The real facts appear one at a time, each with a brief pause between. A subtle 'fact revealed' chime for each.
+Step 6 (all facts shown + 1000ms): The new ingredient and upgrade are shown in a dedicated panel. Production bonus announced.
+Step 7: A soft ambient fade-in of the new zone's audio theme. The UI returns with the zone now marked as explored on the map.
+Pacing Note
+The full zone discovery sequence takes about 20-30 seconds. This is intentional. It should feel like arriving somewhere. Players will watch it every time for the first several zones. For late game, consider a 'skip' option that still respects the moment by doing a 3-second abbreviated version.
+E.5 - Achievement Notification
+Element
+Description
+Trigger
+Achievement earned
+Animation
+Slides in from top-right corner over 400ms. Hangs for 3 seconds. Slides out upward over 300ms.
+Visual
+Dark card with gold border. Achievement icon (unique per achievement). Name in gold. Description in white. Small ? symbol in corner.
+Sound
+A warm, 2-note ascending fanfare - distinctive enough to feel rewarding, short enough not to interrupt gameplay.
+Stacking
+Multiple achievements: stack vertically, each new one pushing previous ones up. Maximum 3 visible at once; overflow queued.
+E.6 - Big Bang Reset Button Progression
+The Big Bang button appears greyed out until the player is at 50% of the prestige threshold. From there:
+Threshold Reached
+Button State
+50% of threshold
+Button becomes visible but dim. Tooltip: "The Big Bang becomes possible when you're ready."
+75% of threshold
+Button brightens. A slow golden pulse begins. Tooltip updates with current Cosmic Memory reward.
+90% of threshold
+Full glow. Pulse quickens. The star in the main panel begins to flicker slightly - a visual suggestion of instability.
+100% (threshold met)
+Button fully illuminated. Deep, resonant pulse. Stars in the background parallax layer begin to slowly spiral inward. The news ticker displays: "Something is about to happen. You can feel it."
+Player hovers button
+A confirmation tooltip appears showing: total stardust this run, Cosmic Memory to be earned, production multiplier for next run, and a short quote from the Big Bang real facts list.
+Player clicks - confirmation screen
+Full-screen overlay. Deep space background. All facts presented. Two buttons: "Initiate Big Bang" (gold) and "Keep Brewing" (dim). No auto-confirm. This is a deliberate choice.
+Big Bang confirmed
+Screen goes to absolute black. Single expanding white point. Expands across the whole screen. Fades to the starting state with the new Cosmic Memory total displayed prominently. The star is back. It's the same star. It's different now.
+SECTION F - ADDITIONAL ZONE WRITING & EXTENDED FACTS
+F. Additional Zone Writing
+Extended discovery texts, alternative visit descriptions (for players who return to a zone), and additional real facts for zones that needed more depth.
+F.1 - Return Visit Texts (For Already-Explored Zones)
+When a player revisits a zone they've already discovered, the discovery panel shows one of these shorter return texts instead of the full discovery. Randomized per visit.
+Earth Orbit - Return Visits
+#
+Text
+1
+"Still up here. Still 250 miles. The Earth still turns below you with what you can only describe as confidence."
+2
+"A new ISS crew has rotated in. They recognize your brewery flag. They have opinions about the stardust. You have opinions about their opinions."
+3
+"From here, all the borders are invisible. All the politics are invisible. The brewery is visible from orbit, though. You're choosing to consider this a good thing."
+Moon - Return Visits
+#
+Text
+1
+"Still quiet. Still 3.8cm further from Earth than your last visit. Armstrong's footprint is still there. So is your flag."
+2
+"The Lunar Brewery runs without you. The regolith filters work. The long days are good for production. Your patrons, apparently, are very patient."
+3
+"Standing on the Moon, the Earth fills the sky. It's moving. It's alive from here. You can see weather systems. You can see oceans. You've been away long enough that 'home' looks different. That's probably fine."
+Oort Cloud - Return Visits
+#
+Text
+1
+"The cold is still absolute. The Sun is still a star. Something is still watching. You pour a drink and wait. The something is patient. So are you."
+2
+"Hale (The Comet) passes through on their orbit. You wave. They wave back. First time they've waved. You note this in the log with three exclamation points."
+3
+"At the edge of the solar system, it occurs to you that everything you've built is somewhere back that direction, toward that faint light. All of it. Everything. From here it fits in the width of a finger held up to the sky."
+Galactic Core - Return Visits
+#
+Text
+1
+"Sagittarius A* is still there. Still pulling. You're still resisting. This is no longer remarkable. This is just the relationship you have with the center of the galaxy."
+2
+"The star S2 completes another orbit. 16 years. You've been operating here long enough that you've watched it come around. You mark it in the log."
+3
+"At the galactic core, the star density is extraordinary - millions of stars in the space between us and the nearest sun back home. It looks crowded. It is crowded. The brewery does well in crowded places."
+F.2 - Extended Real Facts (Bonus Pool)
+These are additional real facts available for zones that need depth, or for the Educational Mode (v2.0 feature). Each has a follow-up for players who want to go deeper.
+Topic
+Main Fact
+Go Deeper
+Pulsars
+The fastest-spinning pulsar known (PSR J1748-2446ad) rotates 716 times per second - at its equator, the surface moves at about 24% of the speed of light.
+Pulsars are neutron stars - the collapsed cores of massive stars that exploded as supernovae. A neutron star packs more than a Sun's worth of mass into a sphere ~20km across. The density is such that a teaspoon of neutron star matter weighs about 10 million tonnes.
+Cosmic Scale
+If you shrank the Sun to the size of a white blood cell (about 10 micrometers), the Milky Way galaxy would be roughly the size of the continental United States.
+Our galaxy contains 200-400 billion stars. The observable universe contains approximately 2 trillion galaxies. The numbers stop meaning anything and start meaning something else entirely.
+Time & Light
+When you look at the Andromeda Galaxy with the naked eye, the light reaching your eye left Andromeda 2.537 million years ago - before Homo sapiens existed.
+The most distant object ever observed (GN-z11) is 32 billion light-years away as it exists now, though the light reaching us left it 13.4 billion years ago. Space expanded in the meantime. We're always looking at the past.
+Dark Matter
+Everything we can see - all stars, galaxies, gas, dust, planets, and people - makes up only about 5% of the universe. Dark matter is 27%. Dark energy is 68%. We are the minority.
+Dark matter doesn't interact with light or electromagnetic force, which is why we can't see it. We infer it exists because galaxies rotate in ways that only make sense if there's far more mass than we can observe. We know it's there. We don't know what it is.
+Black Holes
+Nothing that crosses a black hole's event horizon can escape - not even light. Yet black holes slowly evaporate over extraordinary timescales through Hawking radiation, a quantum effect at the boundary of known physics.
+A black hole with the mass of the Sun would take 10^67 years to evaporate via Hawking radiation. For comparison, the current age of the universe is about 1.38x10^10 years. It would outlast everything else in the universe by an incomprehensible margin.
+Cosmic Web
+The largest structure in the universe is the cosmic web - a filamentary network of galaxies, gas, and dark matter spanning billions of light-years. Voids of near-emptiness exist between the filaments.
+The Hercules-Corona Borealis Great Wall is the largest known structure - approximately 10 billion light-years across. Our entire observable universe is 93 billion light-years in diameter. The structure spans about 10% of everything we can see.
+SECTION G - FUTURE CONTENT IDEAS & RUNNING NOTES
+G. Future Content Ideas & Running Notes
+This section is a living document. Add ideas here whenever they arise. Nothing is committed - everything is possible.
+G.1 - Future Zones (Beyond v1.5)
+Zone Idea
+Concept
+Est. Version
+The Veil Nebula
+Supernova remnant; Nova's homeland; she gives you a personal tour; deeply emotional zone
+v2.0
+Neutron Star Surface
+Unimaginably dense; time runs slightly slower near it; a 'slow zone' mechanic where time-based upgrades are affected
+v2.0
+Magnetar
+Strongest magnetic field in the known universe; causes interference; some upgrades temporarily disabled, others amplified
+v2.0
+The Cosmic Web Node
+A filament junction where multiple galactic walls meet; visualization of the large-scale structure of the universe
+v2.0
+A Quasar
+The brightest objects in the universe; active galactic nuclei powered by supermassive black holes consuming matter; extreme production zone
+v2.5
+The CMB Wall
+The surface of last scattering - the oldest light in the universe; beyond this point, the universe was opaque; a genuinely beautiful zone about limits and origins
+v3.0
+Another Universe (Bubble Nucleation)
+If the multiverse is real and universes form like bubbles, this is where a new one started; Zone ∞.5; extremely secret
+v3.0
+G.2 - Mechanic Ideas (Future Versions)
+Seasonal Events: Real astronomical events (solar eclipses, meteor showers, comet apparitions) trigger in-game events with special limited ingredients
+The Library: A collectable book/article system where players earn real (but short) essays about space topics. Optional, educational, surprisingly addictive.
+The Star Map: A gradually filling map of the entire game's universe - filling in as you explore. A collectible in visual form. Beautiful at endgame.
+Patron Quests: Margaret asks you to help her find data on a specific star. The Cartographer asks you to map a region. Small narrative quests with production rewards.
+The Observatory Log: Everything the Observatories have ever seen, logged chronologically. A record of the game's history. Each entry is a tiny story. Players who read it find secrets.
+Co-op Mode (v3+): Two players, different galaxies, racing to the Observable Universe Edge. Compare production. Share patron encounters. No direct competition - parallel adventures.
+G.3 - Writing Notes & Tone Reminders
+The Tone Rule
+The game should always feel like it was written by someone who genuinely loves space and genuinely loves absurdist comedy and doesn't see any contradiction between those two things. The facts and the jokes should coexist without either diminishing the other. The Oort Cloud can make you feel something and also be funny. Both are true. Both are always available.
+The Escalation Principle
+The game's writing escalates from grounded humor (early game: 'your neighbors have questions') to cosmic absurdism (late game: 'the multiverse has noticed you') to genuine emotional resonance (endgame: 'you're the warmth in the cold') to quiet wonder (Zone ∞: 'the void pours back'). Each stage should feel earned by the stage before it.
+The Educational Contract
+Every real fact must be presented in a way that makes it more memorable than if it had been presented in a textbook. The absurd commentary is not decoration - it is the delivery system. If a player remembers one real thing about space because of this game, that is a win. If they remember ten, that is a triumph. If they go look something up, that is everything.
+G.4 - Open Questions for Future Sessions
+Sound design: Do we want procedurally generated ambient music (infinite variation, always fitting) or curated tracks per zone?
+The Void unlock: Is 42 clicks the right number? Does the 13:08 idle feel too precise? Could it be an approximate - "somewhere around 13 minutes"?
+Patron visit frequency: How often should patrons appear in the news vs. at the 'bar'? Are they integrated into the game UI or purely in the news ticker?
+TRAPPIST franchise screen: Should the multi-planet system map be a separate screen or an expanded zone panel? Full-screen reveal seems right for the emotional beat.
+The golden record in-game: Should there be an actual playable version of the golden record - real audio from the actual Voyager golden record - as a discoverable item? NASA has released it. It's public domain.
+Dev Commentary Mode: What do we actually want to say? This is personal. This deserves its own documentation session. Don't rush it.
+?  END OF EXPANSION VOLUME 1  ?
+More volumes coming. The universe is still expanding.

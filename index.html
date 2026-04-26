@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nebula Brewery — A Space Idle Clicker Game</title>
+  <meta name="description"
+    content="Click a star. Build a brewery. Explore the universe. Learn more than you expected. A space-themed idle clicker game with real astronomical education.">
+  <meta name="theme-color" content="#0A0E1A">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nebula Brewery">
+  <meta property="og:description" content="A space idle clicker game where you brew stardust and explore the universe.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ═══ NEWS TICKER BAR ═══ -->
+  <header id="ticker-bar" class="ticker-bar">
+    <div class="ticker-label">✦ COSMIC NEWS</div>
+    <div class="ticker-track">
+      <div id="ticker-content" class="ticker-content">
+        <span class="ticker-item">Loading cosmic headlines...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN GAME AREA ═══ -->
+  <main class="game-layout">
+
+    <!-- ─── LEFT PANEL: The Brewery ─── -->
+    <section class="panel brewery-panel" id="brewery-panel">
+      <div class="brewery-header">
+        <h1 class="game-title">✦ NEBULA BREWERY ✦</h1>
+        <p class="game-subtitle">A Space Idle Clicker Game</p>
+      </div>
+
+      <!-- Clickable Star -->
+      <div class="star-container" id="star-container">
+        <canvas id="particle-canvas" class="particle-canvas"></canvas>
+        <button id="star-button" class="star-button" aria-label="Click to collect stardust">
+          <div class="star-glow"></div>
+          <div class="star-core">✦</div>
+        </button>
+      </div>
+
+      <!-- Stardust Counter -->
+      <div class="stardust-display">
+        <div class="stardust-count" id="stardust-count">0</div>
+        <div class="stardust-label">Stardust</div>
+        <div class="production-rate" id="production-rate">+0 per second</div>
+        <div class="click-value-display" id="click-value-display">Click: +1 ✦</div>
+        <div class="auto-click-display" id="auto-click-display" style="display:none;"></div>
+      </div>
+
+      <!-- Patron Bar (shows up when a patron arrives) -->
+      <div class="patron-bar" id="patron-bar" style="display:none;" aria-label="A new patron has arrived">
+        <div class="patron-label">✦ AT THE BAR ✦</div>
+        <button class="patron-button" id="patron-button">
+          <span id="patron-name">Unknown</span>
+          <span class="patron-indicator"></span>
+        </button>
+      </div>
+
+      <!-- Patron Dialogue Modal -->
+      <div id="patron-dialog-container" class="patron-dialog-container" style="display:none;">
+        <div class="patron-dialog-content">
+            <button class="patron-dialog-close" id="patron-dialog-close">✕</button>
+            <h3 id="patron-dialog-name">Name</h3>
+            <p class="patron-dialog-desc" id="patron-dialog-desc">Description</p>
+            <div class="patron-dialog-divider">✦</div>
+            <div class="patron-dialog-text" id="patron-dialog-text">Text</div>
+            <div class="patron-dialog-drink" id="patron-dialog-drink">Drinking: Water</div>
+        </div>
+      </div>
+
+      <!-- Building List (owned buildings summary) -->
+      <div class="owned-buildings" id="owned-buildings">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- ─── CENTER PANEL: Universe Map ─── -->
+    <section class="panel universe-panel" id="universe-panel">
+      <div class="panel-header">
+        <h2>Universe Map</h2>
+        <span class="panel-subtitle" id="zones-explored">0 zones explored</span>
+      </div>
+
+      <div class="zone-map" id="zone-map">
+        <!-- Zone nodes populated by JS -->
+        <div class="zone-path-container" id="zone-paths"></div>
+      </div>
+
+      <!-- Zone Info Panel -->
+      <div class="zone-info" id="zone-info" style="display:none;">
+        <button class="zone-info-close" id="zone-info-close">✕</button>
+        <h3 id="zone-info-name"></h3>
+        <p class="zone-info-text" id="zone-info-text"></p>
+        <div class="zone-facts" id="zone-facts"></div>
+        <div class="zone-reward" id="zone-reward"></div>
+      </div>
+    </section>
+
+    <!-- ─── RIGHT PANEL: The Shop ─── -->
+    <section class="panel shop-panel" id="shop-panel">
+      <div class="shop-tabs" role="tablist">
+        <button class="shop-tab active" role="tab" data-tab="buildings" id="tab-buildings">Buildings</button>
+        <button class="shop-tab" role="tab" data-tab="upgrades" id="tab-upgrades">Upgrades</button>
+        <button class="shop-tab" role="tab" data-tab="spacecraft" id="tab-spacecraft">Spacecraft</button>
+      </div>
+
+      <!-- Buildings Tab -->
+      <div class="shop-content active" id="shop-buildings" role="tabpanel">
+        <div class="quantity-selector">
+          <span class="qty-label">Buy:</span>
+          <button class="qty-btn active" data-qty="1">×1</button>
+          <button class="qty-btn" data-qty="10">×10</button>
+          <button class="qty-btn" data-qty="100">×100</button>
+          <button class="qty-btn" data-qty="-1">MAX</button>
+        </div>
+        <div class="shop-list" id="building-list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Upgrades Tab -->
+      <div class="shop-content" id="shop-upgrades" role="tabpanel">
+        <div class="shop-list" id="upgrade-list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Spacecraft Tab -->
+      <div class="shop-content" id="shop-spacecraft" role="tabpanel">
+        <div class="shop-list" id="spacecraft-list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ BOTTOM STATS BAR ═══ -->
+  <footer class="stats-bar" id="stats-bar">
+    <div class="stat">
+      <span class="stat-label">Total Earned</span>
+      <span class="stat-value" id="stat-total-earned">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Achievements</span>
+      <span class="stat-value" id="stat-achievements">0 / 42</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Cosmic Memory</span>
+      <span class="stat-value" id="stat-cosmic-memory">0 ✧✧</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Prestige</span>
+      <span class="stat-value" id="stat-prestige-count">0</span>
+    </div>
+    <div class="stat stat-buttons">
+      <button class="btn-small" id="btn-achievements" title="Achievements">🏆</button>
+      <button class="btn-small" id="btn-settings" title="Settings">⚙️</button>
+    </div>
+  </footer>
+
+  <!-- ═══ OVERLAYS ═══ -->
+
+  <!-- Achievement Notifications -->
+  <div class="notification-stack" id="notification-stack"></div>
+
+  <!-- Zone Discovery Overlay -->
+  <div class="overlay zone-discovery-overlay" id="zone-discovery-overlay" style="display:none;">
+    <div class="zone-discovery-content">
+      <div class="zone-discovery-name" id="discovery-zone-name"></div>
+      <div class="zone-discovery-text" id="discovery-zone-text"></div>
+      <div class="zone-discovery-facts" id="discovery-zone-facts"></div>
+      <div class="zone-discovery-reward" id="discovery-zone-reward"></div>
+      <button class="btn-primary" id="discovery-continue">Continue Brewing</button>
+    </div>
+  </div>
+
+  <!-- Prestige Overlay -->
+  <div class="overlay prestige-overlay" id="prestige-overlay" style="display:none;">
+    <div class="prestige-content">
+      <h2 class="prestige-title">The Big Bang Reset</h2>
+      <p class="prestige-quote" id="prestige-quote"></p>
+      <div class="prestige-stats" id="prestige-stats"></div>
+      <div class="prestige-buttons">
+        <button class="btn-primary btn-prestige" id="btn-confirm-prestige">Initiate Big Bang</button>
+        <button class="btn-secondary" id="btn-cancel-prestige">Keep Brewing</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Achievement Panel Overlay -->
+  <div class="overlay achievement-overlay" id="achievement-overlay" style="display:none;">
+    <div class="achievement-panel-content">
+      <div class="achievement-panel-header">
+        <h2>Achievements</h2>
+        <button class="overlay-close" id="achievement-close">✕</button>
+      </div>
+      <div class="achievement-grid" id="achievement-grid"></div>
+    </div>
+  </div>
+
+  <!-- Settings Overlay -->
+  <div class="overlay settings-overlay" id="settings-overlay" style="display:none;">
+    <div class="settings-content">
+      <div class="settings-header">
+        <h2>Settings</h2>
+        <button class="overlay-close" id="settings-close">✕</button>
+      </div>
+      <div class="settings-list">
+        <label class="setting-row">
+          <span>Sound Effects</span>
+          <input type="checkbox" id="setting-sound" checked>
+        </label>
+        <label class="setting-row">
+          <span>Music</span>
+          <input type="checkbox" id="setting-music" checked>
+        </label>
+        <label class="setting-row">
+          <span>Animations</span>
+          <input type="checkbox" id="setting-animations" checked>
+        </label>
+        <hr>
+        <div class="setting-row">
+          <span>Save Data</span>
+          <div class="setting-buttons">
+            <button class="btn-small" id="btn-export-save">Export</button>
+            <button class="btn-small" id="btn-import-save">Import</button>
+            <button class="btn-small btn-danger" id="btn-wipe-save">Wipe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Big Bang Prestige Button (floating) -->
+  <div class="prestige-button-container" id="prestige-button-container" style="display:none;">
+    <button class="btn-prestige-float" id="btn-prestige">
+      <span class="prestige-btn-text">Big Bang Reset</span>
+      <span class="prestige-btn-sub" id="prestige-btn-sub">+1 ✧✧ Cosmic Memory</span>
+    </button>
+  </div>
+
+  <!-- Offline Production Toast -->
+  <div class="offline-toast" id="offline-toast" style="display:none;">
+    <div class="offline-toast-content">
+      <h3>Welcome back, Brewer</h3>
+      <p id="offline-production-text"></p>
+      <button class="btn-primary" id="btn-dismiss-offline">Collect</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
